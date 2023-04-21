@@ -1,3 +1,38 @@
+<a href="#de-DE">zur deutschen Version</a>
+# Game instructions
+
+The inspiration for this came from a board game sold in the last century that we enjoyed playing in the family.\
+The computer determines a word, which the user is then allowed to guess.\
+To do this, the user clicks on a letter field and selects the desired letter.
+
+Only capital letters from A-Z are allowed, no umlauts.\
+The word length can be left at four (as in the board game) or set to three or five.
+
+To end a game or to start a new game, click anywhere in the open game window with the right mouse button and select the appropriate menu item from the context menu strip.
+
+When entering the letters via the keyboard button, all free fields are filled one by one from left to right. Already filled fields will be skipped. So you can put a letter in advance e.g. on the third field and still think about the other fields.
+
+By clicking on a single field, a single letter can be placed or overwritten.
+Typing of letters and backspace also works as expected.
+
+## Evaluation
+Clicking the OK button starts the evaluation of the input, if all letters are set.
+
+Now zero to (three, four, or five - depending on the word length) pins appear, which indicate a matching letter by their color.
+
+## Example:
+<div style="background-color:#a5efca">
+<table>
+<tr><td>Computer chooses:<td/>THIS</td></tr>
+<tr><td>User tries:<td/>WINE<td/>⚪</td></tr>
+<tr><td>User:<td/>PENS<td/>⚫</td></tr>
+<tr><td>User:<td/>THEM<td/>⚫⚫</td></tr>
+</table>
+etc.
+</div>
+
+<a name="de-DE">
+
 # Spielanleitung
 
 Anregung hierzu gab ein im vorigen Jahrhundert verkauftes Brettspiel, das wir in der Familie gern gespielt haben.\
@@ -22,7 +57,7 @@ Es erscheinen kein bis (drei, vier, oder fünf - je nach Wortlänge) Pins, die d
 
 ## Beispiel:
 <div style="background-color:#a5efca">
-<table><tr>
+<table>
 <tr><td>Computer legt hin:<td/>NASS</td></tr>
 <tr><td>Teilnehmer legt:<td/>WEIN<td/>⚪</td></tr>
 <tr><td>Teilnehmer legt:<td/>NEIN<td/>⚫</td></tr>
