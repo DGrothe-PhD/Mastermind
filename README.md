@@ -23,7 +23,7 @@ Now zero to (three, four, or five - depending on the word length) pins appear, w
 ## Example:
 <div style="background-color:#a5efca">
 <table>
-<tr><td>Computer chooses:<td/>THIS</td></tr>
+<tr><td>Computer chooses:<td/>THIS<td/></td></tr>
 <tr><td>User tries:<td/>WINE<td/>⚪</td></tr>
 <tr><td>User:<td/>PENS<td/>⚫</td></tr>
 <tr><td>User:<td/>THEM<td/>⚫⚫</td></tr>
@@ -58,7 +58,7 @@ Es erscheinen kein bis (drei, vier, oder fünf - je nach Wortlänge) Pins, die d
 ## Beispiel:
 <div style="background-color:#a5efca">
 <table>
-<tr><td>Computer legt hin:<td/>NASS</td></tr>
+<tr><td>Computer legt hin:<td/>NASS<td/></td></tr>
 <tr><td>Teilnehmer legt:<td/>WEIN<td/>⚪</td></tr>
 <tr><td>Teilnehmer legt:<td/>NEIN<td/>⚫</td></tr>
 <tr><td>Teilnehmer legt:<td/>NAPF<td/>⚫⚫</td></tr>
