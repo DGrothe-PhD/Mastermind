@@ -17,6 +17,9 @@
             InitializeComponent();
             FormatDialog();
             StoreResult();
+            StartPosition = FormStartPosition.Manual;
+            if (GuessedRow.caller != null)
+                Location = GuessedRow.caller.Location.MoveBy(10, (int)GuessedRow.caller.Height / 5);
         }
 
         private void FormatDialog()

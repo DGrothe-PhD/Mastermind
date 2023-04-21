@@ -42,9 +42,9 @@ namespace MastermindVariante
             btnEdit.Click += TypeGuessedWord;
             btnClear.Click += Clear;
 
-            caller.Controls.Add(btnEdit);
-            caller.Controls.Add(btnSubmit);
-            caller.Controls.Add(btnClear);
+            caller!.Controls.Add(btnEdit);
+            caller!.Controls.Add(btnSubmit);
+            caller!.Controls.Add(btnClear);
 
             // Pinreihe zur Seite schieben
             pins.ForEach(x => x.MoveBy(3 * btnSubmit.Width + 4 * paddingLeft, 0));

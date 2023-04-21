@@ -1,4 +1,6 @@
-﻿namespace MastermindVariante
+﻿using System.Windows.Forms;
+
+namespace MastermindVariante
 {
     internal static class Erweiterungsmethoden
     {
@@ -35,6 +37,11 @@
         {
             Random random = new();
             return words[random.Next(words.Length + 1)];
+        }
+
+        internal static Point MoveBy(this Point p, int x, int y)
+        {
+            return new Point(p.X + x, p.Y + y);
         }
     }
 

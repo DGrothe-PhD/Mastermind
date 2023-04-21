@@ -6,7 +6,7 @@ namespace MastermindVariante
     public partial class Form1 : FormDarkMode
     {
         bool isRunning = false;
-        public bool WithTips { get; private set; }
+        public static bool WithTips { get; private set; }
 
         string name = "";
         public Evaluation Evaluation { get; private set; }

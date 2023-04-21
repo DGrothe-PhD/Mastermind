@@ -7,6 +7,11 @@
         public Statistics()
         {
             InitializeComponent();
+
+            StartPosition = FormStartPosition.Manual;
+            if (GuessedRow.caller != null)
+                Location = GuessedRow.caller.Location.MoveBy(GuessedRow.caller.Width + 10, 0);
+
             pointsScored = new PointsScored();
             pointsScored.ReadData();
             txtScoredPoints.Text = pointsScored.ToString();

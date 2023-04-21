@@ -5,7 +5,7 @@ namespace MastermindVariante
     public partial class GuessedRow : Parameter, ILetters, IMMDispose
     {
         private static short rowIndex = -1;
-        private readonly Form1 caller;
+        internal static Form1? caller { get; private set; }
         private readonly List<Piece> pieces;
         private readonly List<ResultPin> pins;
         internal Button btnSubmit, btnClear, btnEdit;
@@ -16,10 +16,10 @@ namespace MastermindVariante
 
         internal static List<char>? excludedChars { get; private set; }
 
-        public GuessedRow(Form1 caller)
+        public GuessedRow(Form1 _caller)
         {
-            this.caller = caller;
-            this.withTips = caller.WithTips;
+            caller = _caller;
+            this.withTips = Form1.WithTips;
 
             btnSubmit = new();
             btnClear = new();
@@ -101,7 +101,7 @@ namespace MastermindVariante
         private void CalculatePoints(object? sender, EventArgs e)
         {
             if (Calculate())
-                caller.NextRow();
+                caller?.NextRow();
         }
 
         internal bool Calculate()
@@ -110,7 +110,7 @@ namespace MastermindVariante
             if (pieces.Any(x => String.IsNullOrEmpty(x.GetLetter())))
                 return false;
 
-            result = caller.Evaluation.WordPoints(this.ToString());
+            result = caller!.Evaluation.WordPoints(this.ToString());
 
             pins.Take(result.blackpins).ToList().ForEach(x => x.MakeBlack());
             pins.Skip(result.blackpins).Take(result.whitepins).ToList().ForEach(x => x.MakeWhite());
