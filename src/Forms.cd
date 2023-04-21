@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MastermindVariante.Form1" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="MastermindVariante.FormDarkMode" ManuallyRouted="true">
+      <Path>
+        <Point X="7.25" Y="3.707" />
+        <Point X="6.346" Y="3.707" />
+        <Point X="6.346" Y="1.096" />
+        <Point X="4" Y="1.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>JAACgAIQADQAADNAAijhCBECBgAGASEESAEIkEAAIMI=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.FormDarkMode">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAAAAABAAAAAKAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>FormDarkMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.GameResult">
+    <Position X="12.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAEQAAAACAAAgCAAEEAAEAAIAACgAAAAA=</HashCode>
+      <FileName>GameResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.Statistics" Collapsed="true">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAABAACAAAAQAAACAAAAiAAEEQAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Statistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.Keyboard">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MastermindVariante.FormDarkMode" ManuallyRouted="true">
+      <Path>
+        <Point X="8" Y="2.75" />
+        <Point X="8" Y="1.924" />
+        <Point X="8" Y="1.924" />
+        <Point X="8" Y="1.8" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAACAAAESAQAMAANBCAgAACAAwAKABAAAQAAACAADA=</HashCode>
+      <FileName>Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

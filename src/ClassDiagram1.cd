@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MastermindVariante.Evaluation">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAQAAAAAAAhAAABAAAAAAAAAAAAAAA4EAE=</HashCode>
+      <FileName>Evaluation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.Player">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAICAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.PointsScored">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEBAAAEAAAACAAAAAIgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PointsScored.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.Parameter">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQADAAIAAAAAAAAAAAAAAAAAAAAw=</HashCode>
+      <FileName>Parameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MastermindVariante.Piece">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAiAAAAAAAAAAAAEAIAJIAAAAABQAAAAAAgAEBACAQ=</HashCode>
+      <FileName>Piece.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MastermindVariante.GuessedRow">
+    <Position X="7" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AgACgAAAAAAAAABEjAIABAYAAyAAQAAgAAABAEBACAA=</HashCode>
+      <FileName>GuessedRow.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MastermindVariante.ResultPin">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="MastermindVariante.Parameter" ManuallyRouted="true">
+      <Path>
+        <Point X="5.5" Y="1.863" />
+        <Point X="5.5" Y="2.196" />
+        <Point X="4.104" Y="2.196" />
+        <Point X="4.104" Y="2.7" />
+        <Point X="3" Y="2.7" />
+        <Point X="3" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAACBAAAAAAAAAAAAAAAJAAAAAgAAAAAAAAAAQAAIAA=</HashCode>
+      <FileName>ResultPin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Struct Name="MastermindVariante.Points">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Evaluation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="MastermindVariante.LevelSum">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAEAABAAAAgAAEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>LevelSum.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="MastermindVariante.ILetters">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ILetters.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MastermindVariante.IMMDispose">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMMDispose.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="MastermindVariante.UIFieldChanged&lt;T, U&gt;">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parameter.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MastermindVariante.typingHandler" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="MastermindVariante.BackspaceHandler" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
