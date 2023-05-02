@@ -1,5 +1,7 @@
 ﻿using MastermindVariante.Properties;
+using System.Collections;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MastermindVariante
 {
@@ -18,6 +20,27 @@ namespace MastermindVariante
         public const int paddingLeft = 4;
         public const int width = 58;
         public const short pinsPerRow = 2;
+        public static readonly List<Image> WoodTiles = new()
+        {
+            Resources.wood01, Resources.wood02, Resources.wood03, Resources.wood04, Resources.wood05,
+            Resources.wood06, Resources.wood07, Resources.wood08, Resources.wood09, Resources.wood10,
+            Resources.wood11, Resources.wood12, Resources.wood13, Resources.wood14, Resources.wood15,
+            Resources.wood16, Resources.wood17, Resources.wood18, Resources.wood19
+        };
+
+        private static Image? WoodenTile(char c)
+        {
+            try
+            {
+                int i = (int)c % 19;
+                //return Image.FromFile($"assets/wood{(1 + (int)c % 19):00}.png") ?? null;
+                return WoodTiles[i];
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
 
         public static void SetWoodenAppearance<T, U>(T elm, U? content) where T : Control
         {
@@ -25,13 +48,15 @@ namespace MastermindVariante
             if (String.IsNullOrEmpty(content?.ToString()))
             {
                 elm.BackgroundImage = null;
-                //elm.BackgroundImage = Image.FromFile("nothing.png");
             }
             else
             {
                 char c = (content?.ToString() ?? " ")[0];
                 int flip = (elm.Location.Y + elm.Location.X) % 8;
-                var img = Image.FromFile($"assets/wood{(1 + (int)c % 19):00}.png");
+
+                Image? img = WoodenTile(c);
+                if (img == null) { return; }
+
                 img.RotateFlip((RotateFlipType)flip);
                 elm.BackgroundImage = img;
                 elm.BackgroundImageLayout = ImageLayout.Stretch;

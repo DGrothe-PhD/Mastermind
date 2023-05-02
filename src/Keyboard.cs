@@ -4,9 +4,10 @@
     public delegate void BackspaceHandler();
     public partial class Keyboard : FormDarkMode
     {
-        readonly int InitialPositionX, InitialPositionY;
-        readonly List<Button> buttons;
+        private readonly int InitialPositionX, InitialPositionY;
+        private readonly List<Button> buttons;
         private readonly List<char> excluded;
+        private readonly Image keyBackground;
 
         readonly bool withTips = false;
 
@@ -38,6 +39,8 @@
 
             InitialPositionX = Parameter.initialPositionX;
             InitialPositionY = Parameter.initialPositionY;
+
+            keyBackground = Properties.Resources.key;
 
             KeyPreview = true;
             buttons = new();
@@ -81,7 +84,7 @@
                     InitialPositionX + 55,
                     InitialPositionY + 55 * ((short)30).WrapRow(5, false)
                 ),
-                BackgroundImage = Image.FromFile("assets/key.png"),
+                BackgroundImage = keyBackground,
                 ForeColor = Color.White,
                 UseVisualStyleBackColor = false,
                 Text = "Schließen"
@@ -104,7 +107,7 @@
                         InitialPositionX + 55 * j.WrapCol(5, false),
                         InitialPositionY + 55 * j.WrapRow(5, false)
                     ),
-                    BackgroundImage = Image.FromFile("assets/key.png"),
+                    BackgroundImage = keyBackground,
                     ForeColor = Color.White,
                 };
                 buttons.Add(button);

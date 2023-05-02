@@ -18,7 +18,7 @@
                 Size = new Size(width / 2, height / 2),
                 Name = $"ResultPinR{rowindex}F{fieldindex}",
                 BackColor = Color.Transparent,
-                BackgroundImage = Image.FromFile(@".\assets\emptypin.png"),
+                BackgroundImage = Properties.Resources.emptypin,
                 BackgroundImageLayout = ImageLayout.Stretch
             };
 
@@ -34,21 +34,21 @@
 
         public void MakeWhite()
         {
-            panel.BackgroundImage = Image.FromFile(@".\assets\whitepin.png");
+            panel.BackgroundImage = Properties.Resources.whitepin;
             panel.BackgroundImageLayout = ImageLayout.Stretch;
             panel.Refresh();
         }
 
         public void MakeBlack()
         {
-            panel.BackgroundImage = Image.FromFile(@".\assets\blackpin.png");
+            panel.BackgroundImage = Properties.Resources.blackpin;
             panel.BackgroundImageLayout = ImageLayout.Stretch;
             panel.Refresh();
         }
 
         public void MakeEmpty()
         {
-            panel.BackgroundImage = Image.FromFile(@".\assets\emptypin.png");
+            panel.BackgroundImage = Properties.Resources.emptypin;
             panel.BackgroundImageLayout = ImageLayout.Stretch;
             panel.Refresh();
         }

@@ -28,7 +28,7 @@
             MaximumSize = Size;
             MinimumSize = Size;
 
-            pnlEmoji.BackgroundImage = Image.FromFile("assets/won.png");
+            pnlEmoji.BackgroundImage = Properties.Resources.won;
             pnlEmoji.BackgroundImageLayout = ImageLayout.Stretch;
 
             lblResult.Text = name + ",\r\nSie haben gewonnen!";

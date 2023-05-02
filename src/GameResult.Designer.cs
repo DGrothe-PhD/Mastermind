@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameResult));
             lblResult = new Label();
             pnlEmoji = new Panel();
             lblExtraInfo = new Label();
@@ -69,7 +68,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.background;
             ClientSize = new Size(598, 205);
             Controls.Add(lblExtraInfo);
             Controls.Add(pnlEmoji);

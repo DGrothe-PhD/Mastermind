@@ -30,23 +30,22 @@ namespace MastermindVariante
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             label2 = new Label();
             numWordLength = new NumericUpDown();
             txtUserName = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            spielBeendenToolStripMenuItem = new ToolStripMenuItem();
-            neuesSpielToolStripMenuItem = new ToolStripMenuItem();
-            spielmodusToolStripMenuItem = new ToolStripMenuItem();
-            gegenDenComputerToolStripMenuItem = new ToolStripMenuItem();
-            gegnerStelltAufgabeToolStripMenuItem = new ToolStripMenuItem();
-            vonDateiToolStripMenuItem = new ToolStripMenuItem();
-            spielstatistikF4ToolStripMenuItem = new ToolStripMenuItem();
-            fensterSchließenToolStripMenuItem = new ToolStripMenuItem();
+            EndGameToolStripMenuItem = new ToolStripMenuItem();
+            NewGameToolStripMenuItem = new ToolStripMenuItem();
+            PlayModeToolStripMenuItem = new ToolStripMenuItem();
+            PlayAgainstComputerToolStripMenuItem = new ToolStripMenuItem();
+            PlayWithPeerToolStripMenuItem = new ToolStripMenuItem();
+            FromFileToolStripMenuItem = new ToolStripMenuItem();
+            ShowStatisticsToolStripMenuItem = new ToolStripMenuItem();
+            CloseWindowToolStripMenuItem = new ToolStripMenuItem();
+            ShowTipsToolStripMenuItem = new ToolStripMenuItem();
             btnStart = new Button();
             CmbNames = new ComboBox();
-            tipsToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)numWordLength).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -97,64 +96,72 @@ namespace MastermindVariante
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { spielBeendenToolStripMenuItem, neuesSpielToolStripMenuItem, spielmodusToolStripMenuItem, spielstatistikF4ToolStripMenuItem, fensterSchließenToolStripMenuItem, tipsToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { EndGameToolStripMenuItem, NewGameToolStripMenuItem, PlayModeToolStripMenuItem, ShowStatisticsToolStripMenuItem, CloseWindowToolStripMenuItem, ShowTipsToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(211, 176);
+            contextMenuStrip1.Size = new Size(191, 148);
             // 
             // spielBeendenToolStripMenuItem
             // 
-            spielBeendenToolStripMenuItem.Name = "spielBeendenToolStripMenuItem";
-            spielBeendenToolStripMenuItem.Size = new Size(210, 24);
-            spielBeendenToolStripMenuItem.Text = "Spiel b&eenden";
-            spielBeendenToolStripMenuItem.Click += EndThisRoundToolStripMenuItem_Click;
+            EndGameToolStripMenuItem.Name = "spielBeendenToolStripMenuItem";
+            EndGameToolStripMenuItem.Size = new Size(190, 24);
+            EndGameToolStripMenuItem.Text = "Spiel b&eenden";
+            EndGameToolStripMenuItem.Click += EndThisRoundToolStripMenuItem_Click;
             // 
             // neuesSpielToolStripMenuItem
             // 
-            neuesSpielToolStripMenuItem.Name = "neuesSpielToolStripMenuItem";
-            neuesSpielToolStripMenuItem.Size = new Size(210, 24);
-            neuesSpielToolStripMenuItem.Text = "&Neues Spiel";
-            neuesSpielToolStripMenuItem.Click += NewRoundToolStripMenuItem_Click;
+            NewGameToolStripMenuItem.Name = "neuesSpielToolStripMenuItem";
+            NewGameToolStripMenuItem.Size = new Size(190, 24);
+            NewGameToolStripMenuItem.Text = "&Neues Spiel";
+            NewGameToolStripMenuItem.Click += NewRoundToolStripMenuItem_Click;
             // 
             // spielmodusToolStripMenuItem
             // 
-            spielmodusToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gegenDenComputerToolStripMenuItem, gegnerStelltAufgabeToolStripMenuItem, vonDateiToolStripMenuItem });
-            spielmodusToolStripMenuItem.Name = "spielmodusToolStripMenuItem";
-            spielmodusToolStripMenuItem.Size = new Size(210, 24);
-            spielmodusToolStripMenuItem.Text = "Spiel&modus";
+            PlayModeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { PlayAgainstComputerToolStripMenuItem, PlayWithPeerToolStripMenuItem, FromFileToolStripMenuItem });
+            PlayModeToolStripMenuItem.Name = "spielmodusToolStripMenuItem";
+            PlayModeToolStripMenuItem.Size = new Size(190, 24);
+            PlayModeToolStripMenuItem.Text = "Spiel&modus";
             // 
             // gegenDenComputerToolStripMenuItem
             // 
-            gegenDenComputerToolStripMenuItem.Name = "gegenDenComputerToolStripMenuItem";
-            gegenDenComputerToolStripMenuItem.Size = new Size(237, 26);
-            gegenDenComputerToolStripMenuItem.Text = "Gegen den Computer";
+            PlayAgainstComputerToolStripMenuItem.Name = "gegenDenComputerToolStripMenuItem";
+            PlayAgainstComputerToolStripMenuItem.Size = new Size(237, 26);
+            PlayAgainstComputerToolStripMenuItem.Text = "Gegen den Computer";
             // 
             // gegnerStelltAufgabeToolStripMenuItem
             // 
-            gegnerStelltAufgabeToolStripMenuItem.Name = "gegnerStelltAufgabeToolStripMenuItem";
-            gegnerStelltAufgabeToolStripMenuItem.Size = new Size(237, 26);
-            gegnerStelltAufgabeToolStripMenuItem.Text = "Gegner stellt Aufgabe";
-            gegnerStelltAufgabeToolStripMenuItem.Click += GetWordFromPeerToolStripMenuItem_Click;
+            PlayWithPeerToolStripMenuItem.Name = "gegnerStelltAufgabeToolStripMenuItem";
+            PlayWithPeerToolStripMenuItem.Size = new Size(237, 26);
+            PlayWithPeerToolStripMenuItem.Text = "Gegner stellt Aufgabe";
+            PlayWithPeerToolStripMenuItem.Click += GetWordFromPeerToolStripMenuItem_Click;
             // 
             // vonDateiToolStripMenuItem
             // 
-            vonDateiToolStripMenuItem.Name = "vonDateiToolStripMenuItem";
-            vonDateiToolStripMenuItem.Size = new Size(237, 26);
-            vonDateiToolStripMenuItem.Text = "Von Datei...";
-            vonDateiToolStripMenuItem.Click += FromFileToolStripMenuItem_Click;
+            FromFileToolStripMenuItem.Name = "vonDateiToolStripMenuItem";
+            FromFileToolStripMenuItem.Size = new Size(237, 26);
+            FromFileToolStripMenuItem.Text = "Von Datei...";
+            FromFileToolStripMenuItem.Click += FromFileToolStripMenuItem_Click;
             // 
             // spielstatistikF4ToolStripMenuItem
             // 
-            spielstatistikF4ToolStripMenuItem.Name = "spielstatistikF4ToolStripMenuItem";
-            spielstatistikF4ToolStripMenuItem.Size = new Size(210, 24);
-            spielstatistikF4ToolStripMenuItem.Text = "S&pielstatistik... F4";
-            spielstatistikF4ToolStripMenuItem.Click += ShowStatisticsToolStripMenuItem_Click;
+            ShowStatisticsToolStripMenuItem.Name = "spielstatistikF4ToolStripMenuItem";
+            ShowStatisticsToolStripMenuItem.Size = new Size(190, 24);
+            ShowStatisticsToolStripMenuItem.Text = "S&pielstatistik... F4";
+            ShowStatisticsToolStripMenuItem.Click += ShowStatisticsToolStripMenuItem_Click;
             // 
-            // fensterSchließenToolStripMenuItem
+            // fensterSchliessenToolStripMenuItem
             // 
-            fensterSchließenToolStripMenuItem.Name = "fensterSchließenToolStripMenuItem";
-            fensterSchließenToolStripMenuItem.Size = new Size(210, 24);
-            fensterSchließenToolStripMenuItem.Text = "Fenster s&chließen";
-            fensterSchließenToolStripMenuItem.Click += CloseWindowToolStripMenuItem_Click;
+            CloseWindowToolStripMenuItem.Name = "fensterSchließenToolStripMenuItem";
+            CloseWindowToolStripMenuItem.Size = new Size(190, 24);
+            CloseWindowToolStripMenuItem.Text = "Fenster s&chließen";
+            CloseWindowToolStripMenuItem.Click += CloseWindowToolStripMenuItem_Click;
+            // 
+            // tipsToolStripMenuItem
+            // 
+            ShowTipsToolStripMenuItem.CheckOnClick = true;
+            ShowTipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
+            ShowTipsToolStripMenuItem.Size = new Size(190, 24);
+            ShowTipsToolStripMenuItem.Text = "Tipps";
+            ShowTipsToolStripMenuItem.Click += tipsToolStripMenuItem_Click;
             // 
             // btnStart
             // 
@@ -176,20 +183,12 @@ namespace MastermindVariante
             CmbNames.TabIndex = 7;
             CmbNames.SelectedIndexChanged += CmbNames_SelectedIndexChanged;
             // 
-            // tippsToolStripMenuItem
-            // 
-            tipsToolStripMenuItem.CheckOnClick = true;
-            tipsToolStripMenuItem.Name = "tippsToolStripMenuItem";
-            tipsToolStripMenuItem.Size = new Size(210, 24);
-            tipsToolStripMenuItem.Text = "Tipps";
-            tipsToolStripMenuItem.Click += tipsToolStripMenuItem_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.background;
             ClientSize = new Size(628, 718);
             ContextMenuStrip = contextMenuStrip1;
             Controls.Add(CmbNames);
@@ -217,16 +216,16 @@ namespace MastermindVariante
         private NumericUpDown numWordLength;
         public TextBox txtUserName;
         private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem spielBeendenToolStripMenuItem;
-        private ToolStripMenuItem neuesSpielToolStripMenuItem;
-        private ToolStripMenuItem spielmodusToolStripMenuItem;
-        private ToolStripMenuItem gegenDenComputerToolStripMenuItem;
-        private ToolStripMenuItem gegnerStelltAufgabeToolStripMenuItem;
-        private ToolStripMenuItem vonDateiToolStripMenuItem;
-        private ToolStripMenuItem spielstatistikF4ToolStripMenuItem;
-        private ToolStripMenuItem fensterSchließenToolStripMenuItem;
+        private ToolStripMenuItem EndGameToolStripMenuItem;
+        private ToolStripMenuItem NewGameToolStripMenuItem;
+        private ToolStripMenuItem PlayModeToolStripMenuItem;
+        private ToolStripMenuItem PlayAgainstComputerToolStripMenuItem;
+        private ToolStripMenuItem PlayWithPeerToolStripMenuItem;
+        private ToolStripMenuItem FromFileToolStripMenuItem;
+        private ToolStripMenuItem ShowStatisticsToolStripMenuItem;
+        private ToolStripMenuItem CloseWindowToolStripMenuItem;
         private Button btnStart;
         private ComboBox CmbNames;
-        private ToolStripMenuItem tipsToolStripMenuItem;
+        private ToolStripMenuItem ShowTipsToolStripMenuItem;
     }
 }

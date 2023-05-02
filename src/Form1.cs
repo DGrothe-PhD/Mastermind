@@ -275,7 +275,7 @@ namespace MastermindVariante
 
         private void tipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WithTips = tipsToolStripMenuItem.Checked;
+            WithTips = ShowTipsToolStripMenuItem.Checked;
         }
     }
 }

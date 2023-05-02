@@ -17,7 +17,7 @@ namespace MastermindVariante
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(width, height);
             btnEdit.Text = "";
-            btnEdit.BackgroundImage = Image.FromFile("assets/kbd.png");
+            btnEdit.BackgroundImage = Properties.Resources.kbd;
             btnEdit.BackgroundImageLayout = ImageLayout.Stretch;
             btnEdit.UseVisualStyleBackColor = false;
 
@@ -32,7 +32,7 @@ namespace MastermindVariante
             btnClear.Location = new Point(rowEnd.X + 3 * width + 3 * paddingLeft, rowEnd.Y);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(width, height);
-            btnClear.BackgroundImage = Image.FromFile("assets/eraser.png");
+            btnClear.BackgroundImage = Properties.Resources.eraser;
             btnClear.BackgroundImageLayout = ImageLayout.Stretch;
             btnClear.Text = "";
             btnClear.UseVisualStyleBackColor = false;
@@ -58,7 +58,7 @@ namespace MastermindVariante
 
         internal void OpenKeyboard()
         {
-            Keyboard kbd = new(withTips, excludedChars ?? new List<char>());
+            Keyboard kbd = new(Form1.WithTips, excludedChars ?? new List<char>());
             kbd.SetCaller(this);
             kbd.Show();
         }

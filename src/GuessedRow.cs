@@ -10,7 +10,6 @@ namespace MastermindVariante
         private readonly List<ResultPin> pins;
         internal Button btnSubmit, btnClear, btnEdit;
         private Points result;
-        private readonly bool withTips;
         public Points Result { get => result; }
         public static int NumberOfRows { get => (rowIndex + 1); }
 
@@ -19,7 +18,6 @@ namespace MastermindVariante
         public GuessedRow(Form1 _caller)
         {
             caller = _caller;
-            this.withTips = Form1.WithTips;
 
             btnSubmit = new();
             btnClear = new();

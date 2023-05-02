@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistics));
             txtScoredPoints = new TextBox();
             btnCopy = new Button();
             ChkShowFriends = new CheckBox();
@@ -76,7 +75,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.IndianRed;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.board;
             ClientSize = new Size(800, 450);
             Controls.Add(ChkShowFriends);
             Controls.Add(btnCopy);
