@@ -42,9 +42,9 @@ namespace MastermindVariante
             btnEdit.Click += TypeGuessedWord;
             btnClear.Click += Clear;
 
-            caller!.Controls.Add(btnEdit);
-            caller!.Controls.Add(btnSubmit);
-            caller!.Controls.Add(btnClear);
+            Caller!.Controls.Add(btnEdit);
+            Caller!.Controls.Add(btnSubmit);
+            Caller!.Controls.Add(btnClear);
 
             // Pinreihe zur Seite schieben
             pins.ForEach(x => x.MoveBy(3 * btnSubmit.Width + 4 * paddingLeft, 0));
@@ -58,7 +58,7 @@ namespace MastermindVariante
 
         internal void OpenKeyboard()
         {
-            Keyboard kbd = new(Form1.WithTips, excludedChars ?? new List<char>());
+            Keyboard kbd = new(Form1.WithTips, ExcludedChars ?? new List<char>());
             kbd.SetCaller(this);
             kbd.Show();
         }

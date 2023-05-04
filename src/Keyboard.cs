@@ -22,10 +22,11 @@
 
         public Keyboard()
         {
+            CurrentConfiguration.ApplyLanguage();
             InitializeComponent();
             StartPosition = FormStartPosition.Manual;
-            if (GuessedRow.caller != null)
-                Location = GuessedRow.caller.Location.MoveBy(10, (int)GuessedRow.caller.Height / 5);
+            if (GuessedRow.Caller != null)
+                Location = GuessedRow.Caller.Location.MoveBy(10, (int)GuessedRow.Caller.Height / 5);
 
             //do not let user resize this form
             MaximizeBox = false;

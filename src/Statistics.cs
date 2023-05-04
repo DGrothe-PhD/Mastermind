@@ -6,11 +6,12 @@
         private readonly PointsScored pointsScored;
         public Statistics()
         {
+            CurrentConfiguration.ApplyLanguage();
             InitializeComponent();
 
             StartPosition = FormStartPosition.Manual;
-            if (GuessedRow.caller != null)
-                Location = GuessedRow.caller.Location.MoveBy(GuessedRow.caller.Width + 10, 0);
+            if (GuessedRow.Caller != null)
+                Location = GuessedRow.Caller.Location.MoveBy(GuessedRow.Caller.Width + 10, 0);
 
             pointsScored = new PointsScored();
             pointsScored.ReadData();

@@ -57,7 +57,7 @@ namespace MastermindVariante
         private void Elm_Click(object? sender, EventArgs e)
         {
             elm.BackColor = Color.FromArgb(100, 255, 255, 0);
-            Keyboard kbd = new(Form1.WithTips, GuessedRow.excludedChars ?? new List<char>());
+            Keyboard kbd = new(Form1.WithTips, GuessedRow.ExcludedChars ?? new List<char>());
             kbd.SetCaller(this);
             kbd.Show();
         }

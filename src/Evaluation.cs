@@ -1,4 +1,6 @@
-﻿namespace MastermindVariante
+﻿using Lang;
+
+namespace MastermindVariante
 {
     public struct Points : IComparable<Points>
     {
@@ -122,7 +124,7 @@
         public String PointsAsString(string guessedWord)
         {
             Points p = WordPoints(guessedWord);
-            return $"Exakt: {p.blackpins}, Enthalten: {p.whitepins}";
+            return String.Format(Resources.GuessedWordPointsAsString, p.blackpins, p.whitepins);
         }
 
         public String GetSolution() => solution;

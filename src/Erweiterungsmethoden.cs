@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace MastermindVariante
+﻿namespace MastermindVariante
 {
     internal static class Erweiterungsmethoden
     {
