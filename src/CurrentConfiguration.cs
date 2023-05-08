@@ -6,11 +6,50 @@ namespace MastermindVariante
     {
         private static string languageCode = "en-GB";
 
-        public static readonly List<string> Cultures = new()
+        public static List<string> Cultures => Languages.Keys.ToList();
+
+        public static readonly Dictionary<string, string> Languages = new()
         {
-            "de-DE", 
-            "en-GB", "en-US"
+            {"de-DE", "Deutsch" }, {"fr-FR", "Français" }, {"en-GB", "English" }, {"en-US", "Default" }
         };
+
+        //public static T[] GetControls<T>(string? itemname) where T : new()
+        //{
+        //    T[] ts = new T[Languages.Count];
+        //    for(int i=0;i<Languages.Count;i++)
+        //    {
+        //        ts[i] = new T()
+        //        {
+        //            Text = Languages[Cultures[i]],
+        //            Name = (itemname ?? "ControlItem") + "SwitchLanguage0"+i,
+        //        };
+        //    }
+        //    return ts;
+        //}
+
+        public static T[] GetControls<T>(string? itemname) where T : ToolStripMenuItem, new()
+        {
+            T[] ts = new T[Languages.Count];
+            for (int i = 0; i < Languages.Count; i++)
+            {
+                ts[i] = new T()
+                {
+                    Text = Languages[Cultures[i]],
+                    Name = (itemname ?? "ControlItem") + "SwitchLanguage0" + i,
+                };
+
+                ts[i].Click += LanguageSwitch_Click;
+            }
+            return ts;
+        }
+
+        internal static void LanguageSwitch_Click(object? sender, EventArgs e)
+        {
+            ToolStripMenuItem? ts = sender as ToolStripMenuItem;
+
+            SetLanguage(Languages.FirstOrDefault(x=> x.Value == ts?.Text)!.Key ?? "en-US");
+            ApplyLanguage();
+        }
 
         public static void SetInitialLanguage()
         {

@@ -26,7 +26,6 @@ namespace MastermindVariante
             CmbNames.Show();
             GetNames();
 
-            txtUserName.PlaceholderText = Resources.PlayerNamePlaceholder;
             txtUserName.Multiline = false;
             txtUserName.Text = "";
             txtUserName.Enabled = true;
@@ -68,15 +67,23 @@ namespace MastermindVariante
             Controls.Add(label1);
             Controls.Add(label2);
 
-            label1.Text = Resources.DescriptiveTitle;
-            label2.Text = Resources.WordLengthLabelText;
-            btnStart.Text = Resources.NewGameButtonText;
+            LanguageToolStripMenuItem.DropDownItems.AddRange(CurrentConfiguration.GetControls<ToolStripMenuItem>("ToolStrip"));
+
+            foreach(ToolStripMenuItem ltm in LanguageToolStripMenuItem.DropDownItems)
+            {
+                ltm.Click += Language_Click;
+            }
 
             SetElementNames();
         }
 
         private void SetElementNames()
         {
+            label1.Text = Resources.DescriptiveTitle;
+            label2.Text = Resources.WordLengthLabelText;
+            btnStart.Text = Resources.NewGameButtonText;
+
+            txtUserName.PlaceholderText = Resources.PlayerNamePlaceholder;
             CloseWindowToolStripMenuItem.Text = Resources.CloseWindowToolStripMenuItemText;
             EndGameToolStripMenuItem.Text = Resources.EndGameToolStripMenuItemText;
             FromFileToolStripMenuItem.Text = Resources.FromFileToolStripMenuItemText;
@@ -311,24 +318,8 @@ namespace MastermindVariante
             WithTips = ShowTipsToolStripMenuItem.Checked;
         }
 
-        bool currently = false;
-        private void LanguageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Language_Click(object? sender, EventArgs e)
         {
-            if (!currently)
-            {
-                currently = true;
-                MessageBox.Show("Switch to English");
-                CurrentConfiguration.SetLanguage("en-GB");
-                CurrentConfiguration.ApplyLanguage();
-            }
-            else
-            {
-                currently = false;
-                MessageBox.Show("Switch to German");
-                CurrentConfiguration.SetLanguage("de-DE");
-                CurrentConfiguration.ApplyLanguage();
-            }
-
             SetElementNames();
         }
     }

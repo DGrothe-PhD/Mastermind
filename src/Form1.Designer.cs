@@ -166,7 +166,6 @@ namespace MastermindVariante
             LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem";
             LanguageToolStripMenuItem.Size = new Size(210, 24);
             LanguageToolStripMenuItem.Text = "Sprache";
-            LanguageToolStripMenuItem.Click += LanguageToolStripMenuItem_Click;
             // 
             // Form1
             // 

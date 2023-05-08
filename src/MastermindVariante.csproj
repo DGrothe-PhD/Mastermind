@@ -258,6 +258,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="locales\Resources.fr-FR.resx">
+      <CustomToolNamespace>Lang</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Update="locales\Resources.de-DE.resx">
       <CustomToolNamespace>Lang</CustomToolNamespace>
     </EmbeddedResource>
