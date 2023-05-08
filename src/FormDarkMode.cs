@@ -4,10 +4,6 @@ namespace MastermindVariante
 {
     public class FormDarkMode : Form
     {
-        /*
-using System.Runtime.InteropServices;
-*/
-
         [DllImport("dwmapi.dll")]
         private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
@@ -38,7 +34,14 @@ using System.Runtime.InteropServices;
 
         private void InitializeComponent()
         {
-
+            SuspendLayout();
+            // 
+            // FormDarkMode
+            // 
+            ClientSize = new Size(282, 253);
+            Name = "FormDarkMode";
+            Text = "FormDarkMode";
+            ResumeLayout(false);
         }
 
         public FormDarkMode()

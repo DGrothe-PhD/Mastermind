@@ -1,8 +1,6 @@
 ﻿namespace MastermindVariante
 {
-    // Stecknadelartige Bewertungsmarker.
-    // Werden als leerer Fleck initialisiert und ändern ihre Farbe.
-    // Siehe Anleitung.
+    // Evaluation pins, can be empty, black or white.
     public class ResultPin : Parameter, IMMDispose
     {
         private readonly Form1 caller;

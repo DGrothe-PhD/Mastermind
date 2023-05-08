@@ -1,11 +1,9 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace MastermindVariante
+﻿namespace MastermindVariante
 {
     public partial class GuessedRow : Parameter, ILetters, IMMDispose
     {
         private static short rowIndex = -1;
-        internal static Form1? caller { get; private set; }
+        internal static Form1? Caller { get; private set; }
         private readonly List<Piece> pieces;
         private readonly List<ResultPin> pins;
         internal Button btnSubmit, btnClear, btnEdit;
@@ -13,29 +11,29 @@ namespace MastermindVariante
         public Points Result { get => result; }
         public static int NumberOfRows { get => (rowIndex + 1); }
 
-        internal static List<char>? excludedChars { get; private set; }
+        internal static List<char>? ExcludedChars { get; private set; }
 
         public GuessedRow(Form1 _caller)
         {
-            caller = _caller;
+            Caller = _caller;
 
             btnSubmit = new();
             btnClear = new();
             btnEdit = new();
 
             if (rowIndex < 0)
-                excludedChars = new List<char>();
+                ExcludedChars = new List<char>();
 
             rowIndex++;
-            short level = caller?.WordLength ?? 4;
+            short level = Caller?.WordLength ?? 4;
 
             pieces = new();
             pins = new();
 
             for (short i = 0; i < level; i++)
             {
-                pieces.Add(new Piece(caller, rowIndex, i));
-                pins.Add(new ResultPin(caller, rowIndex, i));
+                pieces.Add(new Piece(Caller, rowIndex, i));
+                pins.Add(new ResultPin(Caller, rowIndex, i));
             }
 
             FormatObjects();
@@ -50,8 +48,6 @@ namespace MastermindVariante
 
         public void SetLetter(char? letter)
         {
-            //Automatisches Anfügen eines neuen Buchstabens.
-            // Für die Zufallsautomatik beim Testen verwendet; später für eine Tastatureingabefunktion sinnvoll.
             for (short i = 0; i < pieces.Count; i++)
             {
                 if (pieces[i].GetLetter() == "")
@@ -99,29 +95,28 @@ namespace MastermindVariante
         private void CalculatePoints(object? sender, EventArgs e)
         {
             if (Calculate())
-                caller?.NextRow();
+                Caller?.NextRow();
         }
 
         internal bool Calculate()
         {
-            // Leere Buchstabenfelder: Wort nicht auswerten
+            // With empty fields, row is not evaluated
             if (pieces.Any(x => String.IsNullOrEmpty(x.GetLetter())))
                 return false;
 
-            result = caller!.Evaluation.WordPoints(this.ToString());
+            result = Caller!.Evaluation.WordPoints(this.ToString());
 
             pins.Take(result.blackpins).ToList().ForEach(x => x.MakeBlack());
             pins.Skip(result.blackpins).Take(result.whitepins).ToList().ForEach(x => x.MakeWhite());
 
-            // Nutzer legt Wort hin, dessen Buchstaben keine Treffer haben.
-            // Die Tastatur kann diese fortan ausblenden als kleine Hilfe.
+            // For tip function: Collect letters of words with zero points - Buttons are hidden next time
             if (result.blackpins == 0 && result.whitepins == 0)
             {
                 foreach (var x in pieces)
                 {
-                    if (!(excludedChars!.Contains(x.GetLetter()[0])))
+                    if (!(ExcludedChars!.Contains(x.GetLetter()[0])))
                     {
-                        excludedChars.Add(x.GetLetter()[0]);
+                        ExcludedChars.Add(x.GetLetter()[0]);
                     }
                 }
             }
@@ -131,7 +126,7 @@ namespace MastermindVariante
             HideButtons();
 
             // full black row == match.
-            caller.GameIsRunning = !(result.Equals(new Points(caller.WordLength, 0)));
+            Caller.GameIsRunning = !(result.Equals(new Points(Caller.WordLength, 0)));
 
             return true;
         }

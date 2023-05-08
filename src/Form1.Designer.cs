@@ -30,8 +30,6 @@ namespace MastermindVariante
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
-            label2 = new Label();
             numWordLength = new NumericUpDown();
             txtUserName = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
@@ -46,30 +44,10 @@ namespace MastermindVariante
             ShowTipsToolStripMenuItem = new ToolStripMenuItem();
             btnStart = new Button();
             CmbNames = new ComboBox();
+            LanguageToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)numWordLength).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(170, 35);
-            label1.TabIndex = 5;
-            label1.Text = "Wortratespiel";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(242, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(95, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Wortlänge";
             // 
             // numWordLength
             // 
@@ -88,87 +66,87 @@ namespace MastermindVariante
             txtUserName.Location = new Point(405, 15);
             txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
-            txtUserName.PlaceholderText = "Spielername (optional)";
+            txtUserName.PlaceholderText = "Placeholder";
             txtUserName.Size = new Size(211, 30);
             txtUserName.TabIndex = 0;
-            txtUserName.KeyPress += txtUserName_KeyPress;
+            txtUserName.KeyPress += TxtUserName_KeyPress;
             // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { EndGameToolStripMenuItem, NewGameToolStripMenuItem, PlayModeToolStripMenuItem, ShowStatisticsToolStripMenuItem, CloseWindowToolStripMenuItem, ShowTipsToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { LanguageToolStripMenuItem, EndGameToolStripMenuItem, NewGameToolStripMenuItem, PlayModeToolStripMenuItem, ShowStatisticsToolStripMenuItem, CloseWindowToolStripMenuItem, ShowTipsToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(191, 148);
+            contextMenuStrip1.Size = new Size(211, 200);
             // 
-            // spielBeendenToolStripMenuItem
+            // EndGameToolStripMenuItem
             // 
-            EndGameToolStripMenuItem.Name = "spielBeendenToolStripMenuItem";
+            EndGameToolStripMenuItem.Name = "EndGameToolStripMenuItem";
             EndGameToolStripMenuItem.Size = new Size(190, 24);
             EndGameToolStripMenuItem.Text = "Spiel b&eenden";
             EndGameToolStripMenuItem.Click += EndThisRoundToolStripMenuItem_Click;
             // 
-            // neuesSpielToolStripMenuItem
+            // NewGameToolStripMenuItem
             // 
-            NewGameToolStripMenuItem.Name = "neuesSpielToolStripMenuItem";
+            NewGameToolStripMenuItem.Name = "NewGameToolStripMenuItem";
             NewGameToolStripMenuItem.Size = new Size(190, 24);
             NewGameToolStripMenuItem.Text = "&Neues Spiel";
             NewGameToolStripMenuItem.Click += NewRoundToolStripMenuItem_Click;
             // 
-            // spielmodusToolStripMenuItem
+            // PlayModeToolStripMenuItem
             // 
             PlayModeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { PlayAgainstComputerToolStripMenuItem, PlayWithPeerToolStripMenuItem, FromFileToolStripMenuItem });
-            PlayModeToolStripMenuItem.Name = "spielmodusToolStripMenuItem";
+            PlayModeToolStripMenuItem.Name = "PlayModeToolStripMenuItem";
             PlayModeToolStripMenuItem.Size = new Size(190, 24);
             PlayModeToolStripMenuItem.Text = "Spiel&modus";
             // 
-            // gegenDenComputerToolStripMenuItem
+            // PlayAgainstComputerToolStripMenuItem
             // 
-            PlayAgainstComputerToolStripMenuItem.Name = "gegenDenComputerToolStripMenuItem";
+            PlayAgainstComputerToolStripMenuItem.Name = "PlayAgainstComputerToolStripMenuItem";
             PlayAgainstComputerToolStripMenuItem.Size = new Size(237, 26);
             PlayAgainstComputerToolStripMenuItem.Text = "Gegen den Computer";
             // 
-            // gegnerStelltAufgabeToolStripMenuItem
+            // PlayWithPeerToolStripMenuItem
             // 
-            PlayWithPeerToolStripMenuItem.Name = "gegnerStelltAufgabeToolStripMenuItem";
+            PlayWithPeerToolStripMenuItem.Name = "PlayWithPeerToolStripMenuItem";
             PlayWithPeerToolStripMenuItem.Size = new Size(237, 26);
             PlayWithPeerToolStripMenuItem.Text = "Gegner stellt Aufgabe";
             PlayWithPeerToolStripMenuItem.Click += GetWordFromPeerToolStripMenuItem_Click;
             // 
-            // vonDateiToolStripMenuItem
+            // FromFileToolStripMenuItem
             // 
-            FromFileToolStripMenuItem.Name = "vonDateiToolStripMenuItem";
+            FromFileToolStripMenuItem.Name = "FromFileToolStripMenuItem";
             FromFileToolStripMenuItem.Size = new Size(237, 26);
             FromFileToolStripMenuItem.Text = "Von Datei...";
             FromFileToolStripMenuItem.Click += FromFileToolStripMenuItem_Click;
             // 
-            // spielstatistikF4ToolStripMenuItem
+            // ShowStatisticsToolStripMenuItem
             // 
-            ShowStatisticsToolStripMenuItem.Name = "spielstatistikF4ToolStripMenuItem";
+            ShowStatisticsToolStripMenuItem.Name = "ShowStatisticsToolStripMenuItem";
             ShowStatisticsToolStripMenuItem.Size = new Size(190, 24);
             ShowStatisticsToolStripMenuItem.Text = "S&pielstatistik... F4";
             ShowStatisticsToolStripMenuItem.Click += ShowStatisticsToolStripMenuItem_Click;
             // 
-            // fensterSchliessenToolStripMenuItem
+            // CloseWindowToolStripMenuItem
             // 
-            CloseWindowToolStripMenuItem.Name = "fensterSchließenToolStripMenuItem";
+            CloseWindowToolStripMenuItem.Name = "CloseWindowToolStripMenuItem";
             CloseWindowToolStripMenuItem.Size = new Size(190, 24);
             CloseWindowToolStripMenuItem.Text = "Fenster s&chließen";
             CloseWindowToolStripMenuItem.Click += CloseWindowToolStripMenuItem_Click;
             // 
-            // tipsToolStripMenuItem
+            // ShowTipsToolStripMenuItem
             // 
             ShowTipsToolStripMenuItem.CheckOnClick = true;
-            ShowTipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
+            ShowTipsToolStripMenuItem.Name = "ShowTipsToolStripMenuItem";
             ShowTipsToolStripMenuItem.Size = new Size(190, 24);
             ShowTipsToolStripMenuItem.Text = "Tipps";
-            ShowTipsToolStripMenuItem.Click += tipsToolStripMenuItem_Click;
+            ShowTipsToolStripMenuItem.Click += TipsToolStripMenuItem_Click;
             // 
             // btnStart
             // 
             btnStart.BackColor = Color.Peru;
-            btnStart.Location = new Point(188, 12);
+            btnStart.Location = new Point(252, 14);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(48, 30);
+            btnStart.Size = new Size(78, 30);
             btnStart.TabIndex = 6;
             btnStart.Text = "Neu";
             btnStart.UseVisualStyleBackColor = false;
@@ -183,6 +161,12 @@ namespace MastermindVariante
             CmbNames.TabIndex = 7;
             CmbNames.SelectedIndexChanged += CmbNames_SelectedIndexChanged;
             // 
+            // LanguageToolStripMenuItem
+            // 
+            LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem";
+            LanguageToolStripMenuItem.Size = new Size(210, 24);
+            LanguageToolStripMenuItem.Text = "Sprache";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -195,8 +179,6 @@ namespace MastermindVariante
             Controls.Add(btnStart);
             Controls.Add(txtUserName);
             Controls.Add(numWordLength);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Location = new Point(0, 0);
             Name = "Form1";
             Text = "MasterMind 1.0";
@@ -227,5 +209,6 @@ namespace MastermindVariante
         private Button btnStart;
         private ComboBox CmbNames;
         private ToolStripMenuItem ShowTipsToolStripMenuItem;
+        private ToolStripMenuItem LanguageToolStripMenuItem;
     }
 }

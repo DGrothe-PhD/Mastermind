@@ -5,9 +5,9 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace MastermindVariante
 {
-    // Dieser Delegat lauscht, ob in einem Control an bestimmter Stelle "ein bestimmter Inhalt ist".
-    // Inhalt kann Verschiedenes sein: Beim Label ist es das Text-Property. Beim Panel kann es das gewählte Bild sein.
-    // Der Aufrufer des Delegaten wird selbst einen Text ausliefern, der dargestellt werden soll.
+    // This delegate looks if there is "a certain content in a control at a certain position".
+    // Content can be various things: For the label it is the text property. For a panel it can be the selected image.
+    // The caller of the delegate will deliver a text to be displayed.
     public delegate void UIFieldChanged<T, U>(T control, U content) where T : Control;
 
     // Parameter der grafischen Elemente für Buchstaben und Auswertung.
@@ -36,7 +36,7 @@ namespace MastermindVariante
                 //return Image.FromFile($"assets/wood{(1 + (int)c % 19):00}.png") ?? null;
                 return WoodTiles[i];
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 return null;
             }

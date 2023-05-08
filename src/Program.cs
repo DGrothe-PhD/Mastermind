@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace MastermindVariante
 {
     internal static class Program
@@ -8,6 +10,7 @@ namespace MastermindVariante
         [STAThread]
         static void Main()
         {
+
             try
             {
                 // To customize application configuration such as set high DPI settings or default font,

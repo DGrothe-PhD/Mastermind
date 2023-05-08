@@ -240,6 +240,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="locales\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -253,6 +258,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="locales\Resources.fr-FR.resx">
+      <CustomToolNamespace>Lang</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="locales\Resources.de-DE.resx">
+      <CustomToolNamespace>Lang</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="locales\Resources.en-GB.resx">
+      <Generator></Generator>
+      <CustomToolNamespace>Lang</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Update="locales\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Lang</CustomToolNamespace>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

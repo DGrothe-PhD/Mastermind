@@ -1,4 +1,6 @@
-﻿namespace MastermindVariante
+﻿using Lang;
+
+namespace MastermindVariante
 {
     public partial class GameResult : FormDarkMode
     {
@@ -10,17 +12,20 @@
         private StreamWriter? sw;
         public GameResult(string name, short level, int numberOfRows)
         {
+            CurrentConfiguration.ApplyLanguage();
             this.name = name;
             this.level = level;
             this.numberOfRows = numberOfRows;
+            this.Text = Resources.GameResultTitle;
 
             InitializeComponent();
             FormatDialog();
             StoreResult();
             StartPosition = FormStartPosition.Manual;
-            if (GuessedRow.caller != null)
-                Location = GuessedRow.caller.Location.MoveBy(10, (int)GuessedRow.caller.Height / 5);
+            if (GuessedRow.Caller != null)
+                Location = GuessedRow.Caller.Location.MoveBy(10, (int)GuessedRow.Caller.Height / 5);
         }
+
 
         private void FormatDialog()
         {
@@ -31,8 +36,8 @@
             pnlEmoji.BackgroundImage = Properties.Resources.won;
             pnlEmoji.BackgroundImageLayout = ImageLayout.Stretch;
 
-            lblResult.Text = name + ",\r\nSie haben gewonnen!";
-            lblExtraInfo.Text = $"Sie haben {numberOfRows} Reihen gebraucht.";
+            lblResult.Text = name + Environment.NewLine + Resources.YouHaveWon;
+            lblExtraInfo.Text = String.Format(Resources.TellNumberOfRows, numberOfRows);
         }
 
         private void StoreResult()
