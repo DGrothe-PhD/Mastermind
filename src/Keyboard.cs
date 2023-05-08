@@ -1,4 +1,6 @@
-﻿namespace MastermindVariante
+﻿using Lang;
+
+namespace MastermindVariante
 {
     public delegate void typingHandler(Button? typed);
     public delegate void BackspaceHandler();
@@ -54,7 +56,6 @@
             this.excluded = excluded;
         }
 
-        // Organisation der Klickmethoden
         public void SetCaller<T>(T caller)
         {
             if (caller is GuessedRow)
@@ -77,7 +78,7 @@
 
         private void MakeButtons()
         {
-            //Dieser Button muss zuerst in die Liste, weil ein Enterdruck auf der Form sonst ein A in das Feld schreibt.
+            //This button must be placed first as first button captures return key.
             Button CloseKbd = new()
             {
                 Size = new Size(160, 50),
@@ -88,7 +89,7 @@
                 BackgroundImage = keyBackground,
                 ForeColor = Color.White,
                 UseVisualStyleBackColor = false,
-                Text = "Schließen"
+                Text = Resources.CloseKeyboard
             };
 
             buttons.Add(CloseKbd);
@@ -113,7 +114,7 @@
                 };
                 buttons.Add(button);
 
-                // j bestimmt nur die Kachelposition für den Buchstaben.
+                // j is for tile position of letter keys.
                 if (j == 3 || j == 24) j++;
                 j++;
             }
@@ -124,13 +125,13 @@
         }
 
         #region clickhandler
-        //Click auf "Tastaturbutton" - mehrere Buchstaben anfügen, dann erst schließen
+        //click on or type several keys for that row
         private void OnClick(object? sender, EventArgs e) => callingRow?.SetLetter((sender as Button)?.Text[0]);
         private void OnKeyTyped(Button? typed) => callingRow?.SetLetter(typed?.Text[0]);
         private void OnBackspace() => callingRow?.RemoveLetter();
         private void Close(Object? sender, EventArgs e) => Close();
 
-        //Wenn auf ein Buchstabenfeld geklickt wird, nur dort einen Buchstaben anfügen
+        //enter a single letter for a field
         private void OnClickClose(object? sender, EventArgs e)
         {
             callingPiece?.SetLetter((sender as Button)?.Text[0]);

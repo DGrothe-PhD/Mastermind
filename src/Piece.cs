@@ -6,8 +6,7 @@ namespace MastermindVariante
 {
     public class Piece : Parameter, ILetters, IMMDispose
     {
-        // Piece ist ein Buchstabe oder ein dafür vorgesehenes freies Feld.
-        // Es enthält ein Label und kapselt es, legt nur die wesentliche Funktionalität offen.
+        // Piece is a letter or free letter field
         private readonly short rowindex, fieldindex;
         private readonly int positionX, positionY;
         private readonly Label elm;
@@ -28,7 +27,6 @@ namespace MastermindVariante
 
         public Piece(Form1 caller, short rowindex, short fieldindex) : this(caller)
         {
-            // Konstruktor erzeugt das Label und setzt es auf seinen vorgesehenen Platz.
             this.rowindex = rowindex;
             this.fieldindex = fieldindex;
 

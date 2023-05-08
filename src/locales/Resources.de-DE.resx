@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AverageAndBest" xml:space="preserve">
+    <value>Schnitt: {0}, Bestwert: {1}</value>
+  </data>
+  <data name="CloseKeyboard" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="CloseWindowToolStripMenuItemText" xml:space="preserve">
+    <value>Fenster s&amp;chließen</value>
+  </data>
+  <data name="CopyStatisticsButtonText" xml:space="preserve">
+    <value>In Zwischenablage kopieren</value>
+  </data>
   <data name="DebugShowSolution" xml:space="preserve">
     <value>Lösung ist: {0}</value>
     <comment>Nur im Debug-Mode</comment>
@@ -124,8 +136,14 @@
   <data name="DescriptiveTitle" xml:space="preserve">
     <value>Wortratespiel</value>
   </data>
+  <data name="EndGameToolStripMenuItemText" xml:space="preserve">
+    <value>Spiel b&amp;eenden</value>
+  </data>
   <data name="ErrorMessageTitle" xml:space="preserve">
     <value>Fehler</value>
+  </data>
+  <data name="FromFileToolStripMenuItemText" xml:space="preserve">
+    <value>Von &amp;Datei...</value>
   </data>
   <data name="FutureFeatureMessageText" xml:space="preserve">
     <value>In Planung</value>
@@ -136,6 +154,9 @@
   <data name="GameEndedMessage" xml:space="preserve">
     <value>Spiel beendet.\r\nLösung war:\r\n{0}</value>
   </data>
+  <data name="GameResultTitle" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
   <data name="GivingUpQuestion" xml:space="preserve">
     <value>Möchten Sie wirklich aufgeben?</value>
   </data>
@@ -145,8 +166,17 @@
   <data name="GuessedWordPointsAsString" xml:space="preserve">
     <value>Exakt: {0}, Enthalten: {1}</value>
   </data>
+  <data name="LanguageToolStripMenuItemText" xml:space="preserve">
+    <value>Sprache / &amp;Language</value>
+  </data>
+  <data name="LevelNotPlayedYet" xml:space="preserve">
+    <value>L{0} noch nicht gespielt</value>
+  </data>
   <data name="NewGameButtonText" xml:space="preserve">
     <value>Neu</value>
+  </data>
+  <data name="NewGameToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;Neues Spiel</value>
   </data>
   <data name="NoRunningGameText" xml:space="preserve">
     <value>Es läuft gerade kein Spiel.</value>
@@ -154,8 +184,20 @@
   <data name="NoRunningGameTitle" xml:space="preserve">
     <value>Spiel</value>
   </data>
+  <data name="NTriesInMGames" xml:space="preserve">
+    <value>{0} Versuche in {1} Spielen</value>
+  </data>
+  <data name="PlayAgainstComputerToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;Allein gegen den Computer</value>
+  </data>
   <data name="PlayerNamePlaceholder" xml:space="preserve">
     <value>Spielername (optional)</value>
+  </data>
+  <data name="PlayModeToolStripMenuItemText" xml:space="preserve">
+    <value>Spiel&amp;modus</value>
+  </data>
+  <data name="PlayWithPeerToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;Gegner stellt Aufgabe</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
     <value>F2 öffnet Tastatur,\r\n# = Okay/Geratenes Wort auswerten\r\nF4 öffnet Statistik</value>
@@ -166,7 +208,25 @@
   <data name="RunningGameMessageTitle" xml:space="preserve">
     <value>Spiel</value>
   </data>
+  <data name="ShowFriendsCheckBox" xml:space="preserve">
+    <value>Freunde zeigen</value>
+  </data>
+  <data name="ShowStatisticsToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;Spielstatistik... F4</value>
+  </data>
+  <data name="ShowTipsToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;Tipps</value>
+  </data>
+  <data name="StatisticsWindowTitle" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="TellNumberOfRows" xml:space="preserve">
+    <value>Sie haben {0} Reihen gebraucht.</value>
+  </data>
   <data name="WordLengthLabelText" xml:space="preserve">
     <value>Wortlänge</value>
+  </data>
+  <data name="YouHaveWon" xml:space="preserve">
+    <value>Sie haben gewonnen!</value>
   </data>
 </root>

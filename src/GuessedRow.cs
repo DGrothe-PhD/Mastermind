@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace MastermindVariante
+﻿namespace MastermindVariante
 {
     public partial class GuessedRow : Parameter, ILetters, IMMDispose
     {
@@ -50,8 +48,6 @@ namespace MastermindVariante
 
         public void SetLetter(char? letter)
         {
-            //Automatisches Anfügen eines neuen Buchstabens.
-            // Für die Zufallsautomatik beim Testen verwendet; später für eine Tastatureingabefunktion sinnvoll.
             for (short i = 0; i < pieces.Count; i++)
             {
                 if (pieces[i].GetLetter() == "")
@@ -104,7 +100,7 @@ namespace MastermindVariante
 
         internal bool Calculate()
         {
-            // Leere Buchstabenfelder: Wort nicht auswerten
+            // With empty fields, row is not evaluated
             if (pieces.Any(x => String.IsNullOrEmpty(x.GetLetter())))
                 return false;
 
@@ -113,8 +109,7 @@ namespace MastermindVariante
             pins.Take(result.blackpins).ToList().ForEach(x => x.MakeBlack());
             pins.Skip(result.blackpins).Take(result.whitepins).ToList().ForEach(x => x.MakeWhite());
 
-            // Nutzer legt Wort hin, dessen Buchstaben keine Treffer haben.
-            // Die Tastatur kann diese fortan ausblenden als kleine Hilfe.
+            // For tip function: Collect letters of words with zero points - Buttons are hidden next time
             if (result.blackpins == 0 && result.whitepins == 0)
             {
                 foreach (var x in pieces)

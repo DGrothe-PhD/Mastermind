@@ -61,6 +61,42 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Average: {0}, best: {1} ähnelt.
+        /// </summary>
+        internal static string AverageAndBest {
+            get {
+                return ResourceManager.GetString("AverageAndBest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Close ähnelt.
+        /// </summary>
+        internal static string CloseKeyboard {
+            get {
+                return ResourceManager.GetString("CloseKeyboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die &amp;Close Window ähnelt.
+        /// </summary>
+        internal static string CloseWindowToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("CloseWindowToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Copy to clipboard ähnelt.
+        /// </summary>
+        internal static string CopyStatisticsButtonText {
+            get {
+                return ResourceManager.GetString("CopyStatisticsButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Solution is: {0} ähnelt.
         /// </summary>
         internal static string DebugShowSolution {
@@ -70,11 +106,20 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Word guessing game ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Word Guessing Game ähnelt.
         /// </summary>
         internal static string DescriptiveTitle {
             get {
                 return ResourceManager.GetString("DescriptiveTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die &amp;Quit this game ähnelt.
+        /// </summary>
+        internal static string EndGameToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("EndGameToolStripMenuItemText", resourceCulture);
             }
         }
         
@@ -84,6 +129,15 @@ namespace Lang {
         internal static string ErrorMessageTitle {
             get {
                 return ResourceManager.GetString("ErrorMessageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die From &amp;File... ähnelt.
+        /// </summary>
+        internal static string FromFileToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("FromFileToolStripMenuItemText", resourceCulture);
             }
         }
         
@@ -115,6 +169,15 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Game Result ähnelt.
+        /// </summary>
+        internal static string GameResultTitle {
+            get {
+                return ResourceManager.GetString("GameResultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Giving up that quick? Really? ähnelt.
         /// </summary>
         internal static string GivingUpQuestion {
@@ -142,6 +205,24 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sprache / &amp;Language ähnelt.
+        /// </summary>
+        internal static string LanguageToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("LanguageToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die L{0} not played yet ähnelt.
+        /// </summary>
+        internal static string LevelNotPlayedYet {
+            get {
+                return ResourceManager.GetString("LevelNotPlayedYet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die New ähnelt.
         /// </summary>
         internal static string NewGameButtonText {
@@ -151,7 +232,16 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die There is no running game at the moment. ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Start &amp;new game ähnelt.
+        /// </summary>
+        internal static string NewGameToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("NewGameToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die There&apos;s no running game at the moment. ähnelt.
         /// </summary>
         internal static string NoRunningGameText {
             get {
@@ -169,11 +259,47 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {0} tries in {1} games. ähnelt.
+        /// </summary>
+        internal static string NTriesInMGames {
+            get {
+                return ResourceManager.GetString("NTriesInMGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Play &amp;against the computer ähnelt.
+        /// </summary>
+        internal static string PlayAgainstComputerToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("PlayAgainstComputerToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Player Name (optional) ähnelt.
         /// </summary>
         internal static string PlayerNamePlaceholder {
             get {
                 return ResourceManager.GetString("PlayerNamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Playing &amp;mode ähnelt.
+        /// </summary>
+        internal static string PlayModeToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("PlayModeToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Play with &amp;peer ähnelt.
+        /// </summary>
+        internal static string PlayWithPeerToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("PlayWithPeerToolStripMenuItemText", resourceCulture);
             }
         }
         
@@ -205,11 +331,65 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show Friends ähnelt.
+        /// </summary>
+        internal static string ShowFriendsCheckBox {
+            get {
+                return ResourceManager.GetString("ShowFriendsCheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show &amp;Statistics...  F4 ähnelt.
+        /// </summary>
+        internal static string ShowStatisticsToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("ShowStatisticsToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get &amp;Tips ähnelt.
+        /// </summary>
+        internal static string ShowTipsToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("ShowTipsToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Statistics ähnelt.
+        /// </summary>
+        internal static string StatisticsWindowTitle {
+            get {
+                return ResourceManager.GetString("StatisticsWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die It took you {0} rows to guess the word. ähnelt.
+        /// </summary>
+        internal static string TellNumberOfRows {
+            get {
+                return ResourceManager.GetString("TellNumberOfRows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Word length ähnelt.
         /// </summary>
         internal static string WordLengthLabelText {
             get {
                 return ResourceManager.GetString("WordLengthLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die You have won! ähnelt.
+        /// </summary>
+        internal static string YouHaveWon {
+            get {
+                return ResourceManager.GetString("YouHaveWon", resourceCulture);
             }
         }
     }

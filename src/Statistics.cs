@@ -1,4 +1,6 @@
-﻿namespace MastermindVariante
+﻿using Lang;
+
+namespace MastermindVariante
 {
     public partial class Statistics : FormDarkMode
     {
@@ -12,6 +14,10 @@
             StartPosition = FormStartPosition.Manual;
             if (GuessedRow.Caller != null)
                 Location = GuessedRow.Caller.Location.MoveBy(GuessedRow.Caller.Width + 10, 0);
+
+            btnCopy.Text = Resources.CopyStatisticsButtonText;
+            ChkShowFriends.Text = Resources.ShowFriendsCheckBox;
+            Text = Resources.StatisticsWindowTitle;
 
             pointsScored = new PointsScored();
             pointsScored.ReadData();

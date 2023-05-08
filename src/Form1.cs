@@ -1,7 +1,4 @@
-
-using System.Configuration;
 using System.Diagnostics;
-
 using Lang;
 
 namespace MastermindVariante
@@ -22,7 +19,7 @@ namespace MastermindVariante
 
         public Form1()
         {
-            CurrentConfiguration.ApplyLanguage();
+            CurrentConfiguration.SetInitialLanguage();
             InitializeComponent();
             SetElements();
 
@@ -56,9 +53,9 @@ namespace MastermindVariante
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(12, 8);
             label1.Name = "label1";
-            label1.Size = new Size(170, 35);
+            label1.AutoSize = false;
+            label1.Size = new Size(Width - 20, 35);
             label1.TabIndex = 5;
-            label1.Text = Resources.DescriptiveTitle;
 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
@@ -67,12 +64,29 @@ namespace MastermindVariante
             label2.Name = "label2";
             label2.Size = new Size(95, 23);
             label2.TabIndex = 2;
-            label2.Text = Resources.WordLengthLabelText;
 
             Controls.Add(label1);
             Controls.Add(label2);
 
+            label1.Text = Resources.DescriptiveTitle;
+            label2.Text = Resources.WordLengthLabelText;
             btnStart.Text = Resources.NewGameButtonText;
+
+            SetElementNames();
+        }
+
+        private void SetElementNames()
+        {
+            CloseWindowToolStripMenuItem.Text = Resources.CloseWindowToolStripMenuItemText;
+            EndGameToolStripMenuItem.Text = Resources.EndGameToolStripMenuItemText;
+            FromFileToolStripMenuItem.Text = Resources.FromFileToolStripMenuItemText;
+            LanguageToolStripMenuItem.Text = Resources.LanguageToolStripMenuItemText;
+            NewGameToolStripMenuItem.Text = Resources.NewGameToolStripMenuItemText;
+            PlayAgainstComputerToolStripMenuItem.Text = Resources.PlayAgainstComputerToolStripMenuItemText;
+            PlayModeToolStripMenuItem.Text = Resources.PlayModeToolStripMenuItemText;
+            PlayWithPeerToolStripMenuItem.Text = Resources.PlayWithPeerToolStripMenuItemText;
+            ShowStatisticsToolStripMenuItem.Text = Resources.ShowStatisticsToolStripMenuItemText;
+            ShowTipsToolStripMenuItem.Text = Resources.ShowTipsToolStripMenuItemText;
         }
 
         private void RunNewGame()
@@ -314,6 +328,8 @@ namespace MastermindVariante
                 CurrentConfiguration.SetLanguage("de-DE");
                 CurrentConfiguration.ApplyLanguage();
             }
+
+            SetElementNames();
         }
     }
 }
