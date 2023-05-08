@@ -144,9 +144,9 @@ namespace MastermindVariante
             // btnStart
             // 
             btnStart.BackColor = Color.Peru;
-            btnStart.Location = new Point(278, 14);
+            btnStart.Location = new Point(252, 14);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(48, 30);
+            btnStart.Size = new Size(78, 30);
             btnStart.TabIndex = 6;
             btnStart.Text = "Neu";
             btnStart.UseVisualStyleBackColor = false;
