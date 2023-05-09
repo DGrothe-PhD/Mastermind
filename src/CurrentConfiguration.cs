@@ -5,6 +5,7 @@ namespace MastermindVariante
     internal static class CurrentConfiguration
     {
         private static string languageCode = "en-GB";
+        public static string Language { get => languageCode; }
 
         public static List<string> Cultures => Languages.Keys.ToList();
 
@@ -13,21 +14,12 @@ namespace MastermindVariante
             {"de-DE", "Deutsch" }, {"fr-FR", "Français" }, {"en-GB", "English" }, {"en-US", "Default" }
         };
 
-        //public static T[] GetControls<T>(string? itemname) where T : new()
-        //{
-        //    T[] ts = new T[Languages.Count];
-        //    for(int i=0;i<Languages.Count;i++)
-        //    {
-        //        ts[i] = new T()
-        //        {
-        //            Text = Languages[Cultures[i]],
-        //            Name = (itemname ?? "ControlItem") + "SwitchLanguage0"+i,
-        //        };
-        //    }
-        //    return ts;
-        //}
-
-        public static T[] GetControls<T>(string? itemname) where T : ToolStripMenuItem, new()
+        /// <summary>
+        /// Returns an array of controls (e. g. radio buttons), one for each language implemented.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>T[]</returns>
+        public static T[] GetControls<T>() where T : Control, new()
         {
             T[] ts = new T[Languages.Count];
             for (int i = 0; i < Languages.Count; i++)
@@ -35,7 +27,28 @@ namespace MastermindVariante
                 ts[i] = new T()
                 {
                     Text = Languages[Cultures[i]],
-                    Name = (itemname ?? "ControlItem") + "SwitchLanguage0" + i,
+                    Name = "SwitchLanguage" + typeof(T).Name + "0" + i,
+                };
+
+                ts[i].Click += LanguageSwitch_Click;
+            }
+            return ts;
+        }
+
+        /// <summary>
+        /// Returns an array of ToolStripItems (e. g. ContextMenuStrip sub-items), one for each language implemented.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>T[]</returns>
+        public static T[] GetToolStrips<T>() where T : ToolStripItem, new()
+        {
+            T[] ts = new T[Languages.Count];
+            for (int i = 0; i < Languages.Count; i++)
+            {
+                ts[i] = new T()
+                {
+                    Text = Languages[Cultures[i]],
+                    Name = "SwitchLanguage" + typeof(T).Name + "0" + i,
                 };
 
                 ts[i].Click += LanguageSwitch_Click;

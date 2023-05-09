@@ -1,7 +1,4 @@
 ﻿using MastermindVariante.Properties;
-using System.Collections;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 
 namespace MastermindVariante
 {

@@ -67,7 +67,7 @@ namespace MastermindVariante
             Controls.Add(label1);
             Controls.Add(label2);
 
-            LanguageToolStripMenuItem.DropDownItems.AddRange(CurrentConfiguration.GetControls<ToolStripMenuItem>("ToolStrip"));
+            LanguageToolStripMenuItem.DropDownItems.AddRange(CurrentConfiguration.GetToolStrips<ToolStripMenuItem>());
 
             foreach(ToolStripMenuItem ltm in LanguageToolStripMenuItem.DropDownItems)
             {
