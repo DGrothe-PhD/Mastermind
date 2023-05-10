@@ -10,6 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="locales\WordLists_de.json" />
+    <None Remove="locales\WordLists_en.json" />
+    <None Remove="locales\WordLists_fr.json" />
     <None Remove="Resources\background.png" />
     <None Remove="Resources\blackpin.png" />
     <None Remove="Resources\board.png" />
@@ -42,6 +45,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="locales\WordLists_fr.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="locales\WordLists_en.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="locales\WordLists_de.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -237,6 +249,11 @@
 
   <ItemGroup>
     <None Include="bin\Debug\net6.0-windows\assets\board.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Text.Json" Version="7.0.2" />
   </ItemGroup>
 
   <ItemGroup>

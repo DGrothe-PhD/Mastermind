@@ -339,5 +339,35 @@ namespace MastermindVariante.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] WordLists_de {
+            get {
+                object obj = ResourceManager.GetObject("WordLists_de", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] WordLists_en {
+            get {
+                object obj = ResourceManager.GetObject("WordLists_en", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] WordLists_fr {
+            get {
+                object obj = ResourceManager.GetObject("WordLists_fr", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
