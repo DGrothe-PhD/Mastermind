@@ -185,7 +185,7 @@
     <value>Spiel</value>
   </data>
   <data name="NTriesInMGames" xml:space="preserve">
-    <value>{0} Versuche in {1} Spielen</value>
+    <value>{0} Versuche in {1} Spielen.</value>
   </data>
   <data name="PlayAgainstComputerToolStripMenuItemText" xml:space="preserve">
     <value>&amp;Allein gegen den Computer</value>

@@ -1,0 +1,33 @@
+{"WordsWith3":
+[
+	"YEN", "TOP", "FEE", "ZOO", "TEA", "PRO", "PER", "OLD",
+	"GAS", "RAP", "PIN", "GIN", "BUG", "BAG", "GAP", "TIN",
+	"JET", "HUT", "NEO", "BEN", "FAN", "SAM", "CAP", "CUP",
+	"HOW", "INN", "FIT", "RYE", "JOE", "JOY", "GAY", "CAN",
+	"TOM", "POP", "LAB", "MAX", "BUS", "WAS", "HIT", "HER", 
+	"RED", "MAY", "OFF", "ICE", "SUN", "BAR", "GUT", "DAY"
+],
+"WordsWith4":
+[
+	"CHEF", "DRAW", "ROPE", "HOPE", "SONG", "SING", "HARE", "ONCE",
+	"LOSE", "RING", "SNOW", "HEAD", "SHOE", "SHOW", "SALT", "MELT",
+	"WALL", "WALK", "ROOF", "JULY", "JUNE", "JUDE", "WORD", "BACK",
+	"BALL", "FOOD", "PEAR", "BOLD", "MILD", "LOVE", "CARE", "DEAR",
+	"FILM", "FILE",	"WILD", "LEGS", "SELF", "THIS", "THUS", "MICE",
+	"BUSY", "WEAK", "WIND", "COLD",	"KIDS", "MILK", "TIME", "DAYS",
+	"FOOT", "HOLD", "DOOR", "SAND", "SHOP", "RENT", "FLAT", "STAR",
+	"NERD", "DEEP", "FOUR", "FIVE", "WINE", "BEER", "MAIL", "MOON",
+	"YOGA", "CLIP", "RARE", "EGGS", "NUTS", "BONE", "TREE", "KNOW",
+	"RUTH", "WARM", "KIND", "RICE", "MEAL", "LOUD", "JAZZ", "BEAT",
+	"TIER", "EYES", "DEAL", "FIND", "THIN", "SOUL", "RAIN", "TEAM"
+],
+"WordsWith5":
+[
+	"TIRED", "CHIRP", "SHOPS", "CHILD", "FLIRT", "BREAD", "TREAT", "HOUSE",
+	"MARCH", "APRIL", "SOLID", "PIZZA", "PASTA", "APRIL", "JESUS", "NIGEL", 
+	"THIGH", "POKAL", "KARTE", "THING", "SPARE", "FEAST", "VENUS", "ORBIT",
+	"HONEY", "SCARF", "CLOUD", "PRICE", "HAPPY", "FRESH", "CHESS", "CHEST",
+	"YOUNG", "PEACE", "PIECE", "NIGHT", "SHINE", "APPLE", "TEAMS",
+	"ORDER", "CHILI", "STONE", "INNER", "FIRST", "EXTRA", "THINK", "AWARD"
+]
+}

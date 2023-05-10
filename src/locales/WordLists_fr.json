@@ -1,0 +1,39 @@
+{"WordsWith3":
+[
+	"QUI", "DIX", "AIR", "BAS", "BON", "CAR", "SAC", "NEZ", "BUS", "CRU", "SEC", "SOL",
+	"TOI", "TON", "UNE", "VIA", "VIF", "VOS", "NUL", "PUR", "QUE", "SIX", "SUR", "TEL", 
+	"AMI", "PEU", "VIN", "MOT", "MAI", "NON", "MOI", "ICI", "ILS", "LUI", "DOS"
+],
+"WordsWith4":
+[
+	"PURE", "QUEL", "QUOI", "RARE", "RIEN", "SANS", "PIED", "MAIN", "TAUX", 
+	"TOIT",
+	"SAUF", "SEPT", "SERA", "SEUL", "SOUS", "STOP", "TANT", "TELS", "PART",
+	"CAVE",
+	"TEND", "TIEN", "TOUS", "TOUT", "DEUX", "DIRE", "DONT", "CINQ", "PAGE",
+	"GARS", "HUIT", "CHAT", "NUIT", "FAIM", "SOIF", "JUIN", "GROS", "STAR",
+	"BIEN", "LIRE", "MIDI", "JOUR", "NUIT", "LUNE", "PAIN", "PRIX", "JAZZ",
+	"OEUF", "YEUX", "ROBE", "JUPE", "JEAN", "FILS", "OEIL", "CELA", "ROCK",
+	"MOIS", "DANS", "CHEZ", "CHER", "CEUX", "AFIN", "AVEC", "BEAU", "VERS",
+	"BOUM", "PUIS", "POUR", "PLUS", "PIRE", "HAUT", "GENS", "ONZE", "PEAU",
+	"ELLE", "DONC", "LOUP", "NEUF", "NOUS", "CENT", "LAIT", "VIDE", "JOLI",
+	"BRIN", "VOIR", "FILM", "VERT", "GRIS", "BLEU", "NOIR", "BRAS", "SEIN"
+],
+"WordsWith5":
+[
+	"ABORD", "AINSI", "ALORS", "ASSEZ", "AUCUN", "AUSSI", "AUTRE", "IDOLE",
+	"AVANT", "AVOIR", "BRAVO", "CELLE", "CELUI", "CETTE", "CHERS", "PORTE",
+	"COMME", "DOUZE", "DRING", "EFFET", "ELLES", "ENFIN", "ENTRE", "TERRE",
+	"ESSAI", "FAIRE", "FORCE", "PARCE", "COEUR", "JAMBE", "BOIRE", "RATER",
+	"PENSE", "QUANT", "QUELS", "RARES", "RESTE", "SEIZE", "SELON", "SALLE",
+	"SIENS", "SINON", "SOYEZ", "SALUT", "PLUIE", "NEIGE", "NAGER",
+	"SUJET", "TELLE", "TENTE", "TIENS", "TOUTE", "FROID", "CHAUD",
+	"VINGT", "TROIS", "CHIEN", "AMOUR", "BELLE", "LUNDI", "SOEUR",
+	"AIMER", "CARTE", "ARBRE", "FEMME", "FILLE", "VILLE", "SPORT",
+	"POMME", "AVRIL", "JEUNE", "JUSTE", "MERCI", "MILLE", "NOTRE",
+	"OUTRE", "PARMI", "PLEIN", "QUAND", "SEULE", "TENIR", "LIVRE",
+	"OMBRE", "PRISE", "TANTE", "HIVER", "PETIT", "GRAND", "MARDI",
+	"MAMAN", "CORPS", "NOYER", "TRAIN", "COQUE", "CANNE", "SAPIN",
+	"ROUGE", "JAUNE", "BLANC", "NOBLE", "GESTE", "GENOU", "VERRE"
+]
+}

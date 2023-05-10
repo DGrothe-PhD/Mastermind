@@ -185,7 +185,7 @@
     <value>Devinette aux mots</value>
   </data>
   <data name="NTriesInMGames" xml:space="preserve">
-    <value>{0} essais en {1} jeux</value>
+    <value>{0} essais en {1} jeux.</value>
   </data>
   <data name="PlayAgainstComputerToolStripMenuItemText" xml:space="preserve">
     <value>&amp;Deviner seul(e)</value>
