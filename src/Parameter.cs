@@ -30,7 +30,6 @@ namespace MastermindVariante
             try
             {
                 int i = (int)c % 19;
-                //return Image.FromFile($"assets/wood{(1 + (int)c % 19):00}.png") ?? null;
                 return WoodTiles[i];
             }
             catch(Exception)

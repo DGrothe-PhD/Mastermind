@@ -160,7 +160,8 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die End of game.\r\nSolution was:\r\n{0} ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die End of game.
+        ///Solution was: ähnelt.
         /// </summary>
         internal static string GameEndedMessage {
             get {
@@ -304,7 +305,9 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die F2: Open the keyboard,\r\n# = Okay/Submit guessing\r\nF4: Open Statistics ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die F2: Open the keyboard,
+        ///# = Okay/Submit guessing
+        ///F4: Open Statistics ähnelt.
         /// </summary>
         internal static string QuickHelpText {
             get {

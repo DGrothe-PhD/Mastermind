@@ -26,24 +26,54 @@ namespace MastermindVariante
         private string solution = "";
         private short wordLength;
         private readonly Form1 caller;
+        private WordLists wordLists;
 
         public Evaluation(Form1 caller)
         {
             this.caller = caller;
             wordLength = caller.WordLength;
+            wordLists = new WordLists();
+        }
+
+        internal void SetWordLists(WordLists? wordLists)
+        {
+            if (wordLists != null)
+            {
+                this.wordLists = wordLists;
+            }
+            else
+            {
+                MessageBox.Show("[Info] Word lists will be empty...");
+            }
         }
 
         public void SetSolution()
         {
-            wordLength = caller.WordLength;
-            solution = wordLength switch
+            try
             {
-                3 => WordLists.WordsWith3.Pick(),
-                5 => WordLists.WordsWith5.Pick(),
-                _ => WordLists.WordsWith4.Pick(),
-            };
+                wordLength = caller.WordLength;
+
+                solution = wordLength switch
+                {
+                    3 => wordLists!.WordsWith3!.Pick(),
+                    5 => wordLists!.WordsWith5!.Pick(),
+                    _ => wordLists!.WordsWith4!.Pick(),
+                };
+                if (String.IsNullOrEmpty(solution)){
+                    throw new Exception();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error - Empty word lists");
+            }
         }
 
+        /// <summary>
+        /// Evaluation algorithm for Mastermind
+        /// </summary>
+        /// <param name="guessedWord">Guessing</param>
+        /// <returns>Points(short blackpins, short whitepins)</returns>
         public Points WordPoints(string guessedWord)
         {
             short blackPins = 0;
@@ -75,6 +105,11 @@ namespace MastermindVariante
             return new Points(blackPins, whitePins);
         }
 
+        /// <summary>
+        /// Provides an answer string as evaluation for a guessed word
+        /// </summary>
+        /// <param name="guessedWord"></param>
+        /// <returns>Exact position: {# blackpins}, included: {# whitepins}</returns>
         public String PointsAsString(string guessedWord)
         {
             Points p = WordPoints(guessedWord);

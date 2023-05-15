@@ -4,8 +4,12 @@ namespace MastermindVariante
 {
     internal static class CurrentConfiguration
     {
+        internal static Form1? Caller { get; set; }
+
         private static string languageCode = "en-GB";
         public static string Language { get => languageCode; }
+
+        private static JsonWordLists? JsonWordLists;
 
         public static List<string> Cultures => Languages.Keys.ToList();
 
@@ -60,19 +64,22 @@ namespace MastermindVariante
         {
             ToolStripMenuItem? ts = sender as ToolStripMenuItem;
 
-            SetLanguage(Languages.FirstOrDefault(x=> x.Value == ts?.Text)!.Key ?? "en-US");
+            SetLanguage(Languages.FirstOrDefault(x => x.Value == ts?.Text)!.Key ?? "en-US");
             ApplyLanguage();
+            SwitchWordListsToCurrentLanguage();
         }
 
+        /// <summary>
+        /// Look up current UI culture (system default) in list of available resources represented by `Cultures`.
+        /// Use as Mastermind's initial UI language if corresponding resources file is present, otherwise English.
+        /// </summary>
         public static void SetInitialLanguage()
         {
-            // Tries to retrieve current UI culture (system default) in list of available resources represented by `Cultures`.
-            // If a system's language is not available by this application, English is used.
             string? lc = Cultures.FirstOrDefault(
                 x => x.StartsWith(Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName)
             );
 
-            if(String.IsNullOrEmpty( lc ) )
+            if (String.IsNullOrEmpty(lc))
             {
                 languageCode = "en-US";
             }
@@ -82,6 +89,7 @@ namespace MastermindVariante
             }
 
             ApplyLanguage();
+            SwitchWordListsToCurrentLanguage();
         }
 
         public static void ApplyLanguage()
@@ -90,6 +98,19 @@ namespace MastermindVariante
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(languageCode);
         }
 
+        private static void SwitchWordListsToCurrentLanguage()
+        {
+            JsonWordLists = new JsonWordLists(languageCode);
+            if (JsonWordLists != null)
+            {
+                Caller?.Evaluation?.SetWordLists(JsonWordLists?.CurrentWordLists);
+            }
+        }
+
+        /// <summary>
+        /// Set Mastermind's language property.
+        /// </summary>
+        /// <param name="code"></param>
         public static void SetLanguage(string code)
         {
             if (Cultures.Contains(code))

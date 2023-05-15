@@ -19,6 +19,8 @@ namespace MastermindVariante
 
         public Form1()
         {
+            Evaluation = new Evaluation(this);
+            CurrentConfiguration.Caller = this;
             CurrentConfiguration.SetInitialLanguage();
             InitializeComponent();
             SetElements();
@@ -39,8 +41,6 @@ namespace MastermindVariante
             // https://stackoverflow.com/questions/57124243/winforms-dark-title-bar-on-windows-10
             //
             rows = new List<GuessedRow>();
-            Evaluation = new Evaluation(this);
-
         }
 
         private void SetElements()
@@ -152,7 +152,7 @@ namespace MastermindVariante
             GetNames();
             CmbNames.Show();
 
-            if (!hasWon) MessageBox.Show(String.Format(Resources.GameEndedMessage, Evaluation.GetSolution()));
+            if (!hasWon) MessageBox.Show(Resources.GameEndedMessage+ Environment.NewLine + Evaluation.GetSolution());
             GameIsRunning = false;
         }
 
@@ -265,8 +265,7 @@ namespace MastermindVariante
             }
             else if (e.KeyCode == Keys.F1)
             {
-                //[tsl] QuickHelpText
-                MessageBox.Show("F2 öffnet Tastatur,\r\n# = Okay/Wort auswerten\r\nF4 öffnet Statistik");
+                MessageBox.Show(Resources.QuickHelpText);
             }
             else if (e.KeyCode == Keys.F4 && !GameIsRunning)
             {

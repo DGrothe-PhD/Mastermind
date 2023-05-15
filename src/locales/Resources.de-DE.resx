@@ -152,7 +152,8 @@
     <value>Neue Funktion</value>
   </data>
   <data name="GameEndedMessage" xml:space="preserve">
-    <value>Spiel beendet.\r\nLösung war:\r\n{0}</value>
+    <value>Spiel beendet.
+Lösung war:</value>
   </data>
   <data name="GameResultTitle" xml:space="preserve">
     <value>Ergebnis</value>
@@ -200,7 +201,9 @@
     <value>&amp;Gegner stellt Aufgabe</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2 öffnet Tastatur,\r\n# = Okay/Geratenes Wort auswerten\r\nF4 öffnet Statistik</value>
+    <value>F2 öffnet Tastatur,
+# = Okay/Geratenes Wort auswerten
+F4 öffnet Statistik</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Bitte beenden Sie zunächst das laufende Spiel.</value>

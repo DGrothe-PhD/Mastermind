@@ -47,12 +47,15 @@
   <ItemGroup>
     <Content Include="locales\WordLists_fr.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Lang</CustomToolNamespace>
     </Content>
     <Content Include="locales\WordLists_en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Lang</CustomToolNamespace>
     </Content>
     <Content Include="locales\WordLists_de.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CustomToolNamespace>Lang</CustomToolNamespace>
     </Content>
     <Content Include="Resources\background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -291,7 +294,7 @@
       <CustomToolNamespace>Lang</CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

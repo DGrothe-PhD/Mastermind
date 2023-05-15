@@ -152,7 +152,8 @@
     <value>Nouvelle fonction</value>
   </data>
   <data name="GameEndedMessage" xml:space="preserve">
-    <value>Le jeu est fini.\r\nLa solution était:\r\n{0}</value>
+    <value>Le jeu est fini.
+La solution était:</value>
   </data>
   <data name="GameResultTitle" xml:space="preserve">
     <value>Résultat</value>
@@ -200,7 +201,9 @@
     <value>Jouer &amp;avec un(e) ami(e)</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2 - ouvrir le clavier,\r\n# = évaluer le mot deviné\r\nF4 - montrer les statistiques</value>
+    <value>F2 - ouvrir le clavier,
+# = évaluer le mot deviné
+F4 - montrer les statistiques</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Veuillez d'abord quitter le jeu en cours.</value>

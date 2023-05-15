@@ -152,7 +152,8 @@
     <value>New feature</value>
   </data>
   <data name="GameEndedMessage" xml:space="preserve">
-    <value>End of game.\r\nSolution was:\r\n{0}</value>
+    <value>End of game.
+Solution was:</value>
   </data>
   <data name="GameResultTitle" xml:space="preserve">
     <value>Game Result</value>
@@ -200,7 +201,9 @@
     <value>Play with &amp;peer</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2: Open the keyboard,\r\n# = Okay/Submit guessing\r\nF4: Open Statistics</value>
+    <value>F2: Open the keyboard,
+# = Okay/Submit guessing
+F4: Open Statistics</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Please stop the running game first.</value>
