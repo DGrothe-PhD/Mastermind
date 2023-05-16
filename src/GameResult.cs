@@ -47,7 +47,7 @@ namespace MastermindVariante
                 return;
             try
             {
-                fs = new FileStream("gameresults.csv", FileMode.Append);
+                fs = new FileStream("Resources/gameresults.csv", FileMode.Append);
                 sw = new StreamWriter(fs);
                 sw.WriteLine(String.Join(';', name, DateTime.Today.ToString("d"), level, numberOfRows));
                 sw.Close();

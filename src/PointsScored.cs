@@ -4,7 +4,7 @@ namespace MastermindVariante
 {
     public class PointsScored
     {
-        private readonly string dateiname = "gameresults.csv";
+        private readonly string dateiname = "Resources/gameresults.csv";
         private string[]? lines;
         internal readonly List<Player> Players;
 
