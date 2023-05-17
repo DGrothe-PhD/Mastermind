@@ -1,5 +1,13 @@
 <a href="#de-DE">zur deutschen Version</a>
-# Game instructions
+## System requirements
+* Windows 11
+* Windows 10 1607+
+* Windows 8.1
+* Windows 7 SP1
+* Works on both x86 and x64 architecture
+* .NET 6 runtime required, can be easily installed from the link in the message box
+
+## Game instructions
 
 The inspiration for this came from a board game sold in the last century that we enjoyed playing in the family.\
 The computer determines a word, which the user is then allowed to guess.\
@@ -15,12 +23,12 @@ When entering the letters via the keyboard button, all free fields are filled on
 By clicking on a single field, a single letter can be placed or overwritten.
 Typing of letters and backspace also works as expected.
 
-## Evaluation
+### Evaluation
 Clicking the OK button starts the evaluation of the input, if all letters are set.
 
 Now zero to (three, four, or five - depending on the word length) pins appear, which indicate a matching letter by their color.
 
-## Example:
+### Example:
 <div style="background-color:#a5efca">
 <table>
 <tr><td>Computer chooses:<td/>THIS<td/></td></tr>
@@ -31,9 +39,10 @@ Now zero to (three, four, or five - depending on the word length) pins appear, w
 etc.
 </div>
 
+<hr>
 <a name="de-DE">
 
-# Spielanleitung
+## Spielanleitung
 
 Anregung hierzu gab ein im vorigen Jahrhundert verkauftes Brettspiel, das wir in der Familie gern gespielt haben.\
 Der Computer legt ein Wort fest, das der Nutzer dann raten darf.\
@@ -50,12 +59,12 @@ Bei Eingabe der Buchstaben über den Tastatur-Button werden nacheinander von lin
 
 Durch einen Klick auf ein einzelnes Feld kann ein einzelner Buchstabe gelegt oder überschrieben werden.
 
-## Auswertung
+### Auswertung
 Durch einen Klick auf den OK-Button startet die Auswertung der Eingabe, falls alle Buchstaben gesetzt sind.
 
 Es erscheinen kein bis (drei, vier, oder fünf - je nach Wortlänge) Pins, die durch ihre Farbe anzeigen, ob es einen Treffer gab.
 
-## Beispiel:
+### Beispiel:
 <div style="background-color:#a5efca">
 <table>
 <tr><td>Computer legt hin:<td/>NASS<td/></td></tr>
