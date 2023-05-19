@@ -40,7 +40,7 @@ namespace MastermindVariante
         private void FormatPiece()
         {
             elm.BorderStyle = BorderStyle.Fixed3D;
-            elm.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            elm.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point).Resize(resizePercentage);
             elm.BackColor = Color.Transparent;
 
             elm.Location = new Point(positionX, positionY);

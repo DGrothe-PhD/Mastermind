@@ -28,10 +28,6 @@ namespace MastermindVariante
             CmbNames.Show();
             GetNames();
 
-            txtUserName.Multiline = false;
-            txtUserName.Text = "";
-            txtUserName.Enabled = true;
-
             numWordLength.Enabled = true;
 
             KeyPreview = true;
@@ -45,20 +41,30 @@ namespace MastermindVariante
 
         private void SetElements()
         {
+            //Size = Size.Rescale(Parameter.resizePercentage);
+            btnStart.Location = new Point(252, Parameter.DefaultTopMargin);
+            btnStart.Size = new Size(78, Parameter.DefaultElementHeight);
+
+            txtUserName.Multiline = false;
+            txtUserName.Text = "";
+            txtUserName.Enabled = true;
+            txtUserName.Location = new Point(405, Parameter.DefaultTopMargin);
+            numWordLength.Location = new Point(343, Parameter.DefaultTopMargin);
+
             label1 = new Label();
             label2 = new Label();
 
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(12, 8);
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
+            label1.Location = new Point(12, Parameter.DefaultTopMargin);
             label1.Name = "label1";
             label1.AutoSize = false;
-            label1.Size = new Size(Width - 20, 35);
+            label1.Size = new Size(Width - 20, Parameter.DefaultElementHeight);
             label1.TabIndex = 5;
 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
             label2.Location = new Point(242, 15);
             label2.Name = "label2";
             label2.Size = new Size(95, 23);
@@ -69,7 +75,7 @@ namespace MastermindVariante
 
             LanguageToolStripMenuItem.DropDownItems.AddRange(CurrentConfiguration.GetToolStrips<ToolStripMenuItem>());
 
-            foreach(ToolStripMenuItem ltm in LanguageToolStripMenuItem.DropDownItems)
+            foreach (ToolStripMenuItem ltm in LanguageToolStripMenuItem.DropDownItems)
             {
                 ltm.Click += Language_Click;
             }
@@ -152,7 +158,7 @@ namespace MastermindVariante
             GetNames();
             CmbNames.Show();
 
-            if (!hasWon) MessageBox.Show(Resources.GameEndedMessage+ Environment.NewLine + Evaluation.GetSolution());
+            if (!hasWon) MessageBox.Show(Resources.GameEndedMessage + Environment.NewLine + Evaluation.GetSolution());
             GameIsRunning = false;
         }
 

@@ -30,6 +30,8 @@ namespace MastermindVariante
             if (GuessedRow.Caller != null)
                 Location = GuessedRow.Caller.Location.MoveBy(10, (int)GuessedRow.Caller.Height / 5);
 
+            //Size = Size.Rescale(Parameter.resizePercentage);
+
             //do not let user resize this form
             MaximizeBox = false;
             MaximumSize = Size;
@@ -83,14 +85,17 @@ namespace MastermindVariante
             {
                 Size = new Size(160, 50),
                 Location = new Point(
-                    InitialPositionX + 55,
-                    InitialPositionY + 55 * ((short)30).WrapRow(5, false)
+                    InitialPositionX + 55 * Parameter.resizePercentage / 100,
+                    InitialPositionY + 55 * Parameter.resizePercentage / 100 * ((short)30).WrapRow(5, false)
                 ),
                 BackgroundImage = keyBackground,
                 ForeColor = Color.White,
                 UseVisualStyleBackColor = false,
                 Text = Resources.CloseKeyboard
             };
+
+            CloseKbd.Font = CloseKbd.Font.Resize(Parameter.resizePercentage);
+            CloseKbd.Size = CloseKbd.Size.Rescale(Parameter.resizePercentage);
 
             buttons.Add(CloseKbd);
             short j = 1;
@@ -106,12 +111,15 @@ namespace MastermindVariante
                     Text = c.ToString(),
                     Size = new Size(50, 50),
                     Location = new Point(
-                        InitialPositionX + 55 * j.WrapCol(5, false),
-                        InitialPositionY + 55 * j.WrapRow(5, false)
+                        InitialPositionX + 55 * Parameter.resizePercentage / 100 * j.WrapCol(5, false),
+                        InitialPositionY + 55 * Parameter.resizePercentage / 100 * j.WrapRow(5, false)
                     ),
                     BackgroundImage = keyBackground,
                     ForeColor = Color.White,
                 };
+                button.Font = button.Font.Resize(Parameter.resizePercentage);
+                button.Size = button.Size.Rescale(Parameter.resizePercentage);
+
                 buttons.Add(button);
 
                 // j is for tile position of letter keys.

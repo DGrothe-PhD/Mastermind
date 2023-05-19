@@ -29,15 +29,32 @@ namespace MastermindVariante
 
         private void FormatDialog()
         {
+            Size = Size.Rescale(Parameter.resizePercentage);
+
             MaximizeBox = false;
             MaximumSize = Size;
             MinimumSize = Size;
 
             pnlEmoji.BackgroundImage = Properties.Resources.won;
             pnlEmoji.BackgroundImageLayout = ImageLayout.Stretch;
+            pnlEmoji.Size = pnlEmoji.Size.Rescale(Parameter.resizePercentage);
 
             lblResult.Text = name + Environment.NewLine + Resources.YouHaveWon;
+            lblResult.Location = new Point(
+                pnlEmoji.Width + 24 * Parameter.resizePercentage / 100,
+                lblResult.Location.Y
+            );
+            lblExtraInfo.Location = new Point(
+                pnlEmoji.Width + 24 * Parameter.resizePercentage / 100,
+                lblResult.Height + lblResult.Location.Y + 24 * Parameter.resizePercentage / 100
+            );
+
+            Size = new Size(Width, pnlEmoji.Size.Height + 28 * Parameter.resizePercentage/100);
+
             lblExtraInfo.Text = String.Format(Resources.TellNumberOfRows, numberOfRows);
+
+            lblExtraInfo.Font = lblExtraInfo.Font.Resize(Parameter.resizePercentage);
+            lblResult.Font = lblResult.Font.Resize(Parameter.resizePercentage);
         }
 
         private void StoreResult()

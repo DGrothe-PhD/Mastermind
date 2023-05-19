@@ -10,13 +10,21 @@ namespace MastermindVariante
     // Parameter der grafischen Elemente für Buchstaben und Auswertung.
     public abstract class Parameter
     {
-        public const int initialPositionY = 48;
-        public const int initialPositionX = 17;
-        public const int height = 58;
-        public const int paddingBottom = 4;
-        public const int paddingLeft = 4;
-        public const int width = 58;
+        public const int DefaultElementHeight = 30;
+        public const int DefaultTopMargin = 15;
+
+        public static readonly int screenheight = Screen.PrimaryScreen.Bounds.Height;
+        public static readonly int resizePercentage = (screenheight > 1000) ? 100 : 75;
+
+        public static readonly int initialPositionY = Math.Max(48 * resizePercentage / 100, DefaultElementHeight + DefaultTopMargin);
+        public static readonly int initialPositionX = 17 * resizePercentage / 100;
+        public static readonly int height = 58 * resizePercentage / 100;
+        public static readonly int paddingBottom = 4 * resizePercentage / 100;
+        public static readonly int paddingLeft = 4 * resizePercentage / 100;
+        public static readonly int width = 58 * resizePercentage / 100;
         public const short pinsPerRow = 2;
+
+
         public static readonly List<Image> WoodTiles = new()
         {
             Resources.wood01, Resources.wood02, Resources.wood03, Resources.wood04, Resources.wood05,
@@ -32,7 +40,7 @@ namespace MastermindVariante
                 int i = (int)c % 19;
                 return WoodTiles[i];
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return null;
             }
