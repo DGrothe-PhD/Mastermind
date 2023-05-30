@@ -1,4 +1,6 @@
 ﻿
+using System.Reflection.Metadata.Ecma335;
+
 namespace MastermindVariante
 {
     partial class Form1
@@ -33,6 +35,7 @@ namespace MastermindVariante
             numWordLength = new NumericUpDown();
             txtUserName = new TextBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            LanguageToolStripMenuItem = new ToolStripMenuItem();
             EndGameToolStripMenuItem = new ToolStripMenuItem();
             NewGameToolStripMenuItem = new ToolStripMenuItem();
             PlayModeToolStripMenuItem = new ToolStripMenuItem();
@@ -44,7 +47,6 @@ namespace MastermindVariante
             ShowTipsToolStripMenuItem = new ToolStripMenuItem();
             btnStart = new Button();
             CmbNames = new ComboBox();
-            LanguageToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)numWordLength).BeginInit();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -63,11 +65,11 @@ namespace MastermindVariante
             // txtUserName
             // 
             txtUserName.BackColor = Color.WhiteSmoke;
-            txtUserName.Location = new Point(405, 15);
+            txtUserName.Location = new Point(250, 58);
             txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
             txtUserName.PlaceholderText = "Placeholder";
-            txtUserName.Size = new Size(211, 30);
+            txtUserName.Size = new Size(179, 30);
             txtUserName.TabIndex = 0;
             txtUserName.KeyPress += TxtUserName_KeyPress;
             // 
@@ -76,7 +78,13 @@ namespace MastermindVariante
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { LanguageToolStripMenuItem, EndGameToolStripMenuItem, NewGameToolStripMenuItem, PlayModeToolStripMenuItem, ShowStatisticsToolStripMenuItem, CloseWindowToolStripMenuItem, ShowTipsToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(211, 200);
+            contextMenuStrip1.Size = new Size(191, 172);
+            // 
+            // LanguageToolStripMenuItem
+            // 
+            LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem";
+            LanguageToolStripMenuItem.Size = new Size(190, 24);
+            LanguageToolStripMenuItem.Text = "Sprache";
             // 
             // EndGameToolStripMenuItem
             // 
@@ -144,9 +152,9 @@ namespace MastermindVariante
             // btnStart
             // 
             btnStart.BackColor = Color.Peru;
-            btnStart.Location = new Point(252, 14);
+            btnStart.Location = new Point(250, 16);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(78, 30);
+            btnStart.Size = new Size(75, 23);
             btnStart.TabIndex = 6;
             btnStart.Text = "Neu";
             btnStart.UseVisualStyleBackColor = false;
@@ -155,17 +163,11 @@ namespace MastermindVariante
             // CmbNames
             // 
             CmbNames.FormattingEnabled = true;
-            CmbNames.Location = new Point(404, 60);
+            CmbNames.Location = new Point(250, 106);
             CmbNames.Name = "CmbNames";
-            CmbNames.Size = new Size(213, 28);
+            CmbNames.Size = new Size(180, 28);
             CmbNames.TabIndex = 7;
             CmbNames.SelectedIndexChanged += CmbNames_SelectedIndexChanged;
-            // 
-            // LanguageToolStripMenuItem
-            // 
-            LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem";
-            LanguageToolStripMenuItem.Size = new Size(210, 24);
-            LanguageToolStripMenuItem.Text = "Sprache";
             // 
             // Form1
             // 
@@ -193,8 +195,8 @@ namespace MastermindVariante
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private Label lblTitle;
+        private Label lblWordLength;
         private NumericUpDown numWordLength;
         public TextBox txtUserName;
         private ContextMenuStrip contextMenuStrip1;

@@ -51,6 +51,21 @@
         {
             return new Point(p.X + x, p.Y + y);
         }
+
+        internal static Font Resize(this Font font, int resizePercentage)
+        {
+            return new Font(font.FontFamily.Name, font.Size * resizePercentage / 100, font.Style);
+        }
+
+        /// <summary>
+        /// Rescale a size of a form or panel, etc. to a certain percentage.
+        /// </summary>
+        /// <param name="size">Size to be rescaled</param>
+        /// <param name="resizePercentage">Integer percentage of rescaling. 100 is same size</param>
+        internal static Size Rescale(this Size size, int resizePercentage)
+        {
+            return new Size(size.Width * resizePercentage/100, size.Height * resizePercentage/100);
+        }
     }
 
 }

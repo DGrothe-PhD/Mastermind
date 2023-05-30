@@ -28,8 +28,8 @@ namespace MastermindVariante
         {
             if (numGames == 0)
                 return String.Format(" - "+ Resources.LevelNotPlayedYet, level);
-            return String.Format(" - " + Resources.NTriesInMGames + Environment.NewLine,
-                    level, rows.Sum(), numGames) +
+            return String.Format($" - {level}: " + Resources.NTriesInMGames + Environment.NewLine,
+                    rows.Sum(), numGames) +
                 String.Format("   "+ Resources.AverageAndBest, $"{(double)rows.Average():0.00}", rows.Min());
         }
     }

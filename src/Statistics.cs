@@ -11,6 +11,8 @@ namespace MastermindVariante
             CurrentConfiguration.ApplyLanguage();
             InitializeComponent();
 
+            ChkShowFriends.Font = ChkShowFriends.Font.Resize(Parameter.resizePercentage);
+
             StartPosition = FormStartPosition.Manual;
             if (GuessedRow.Caller != null)
                 Location = GuessedRow.Caller.Location.MoveBy(GuessedRow.Caller.Width + 10, 0);
