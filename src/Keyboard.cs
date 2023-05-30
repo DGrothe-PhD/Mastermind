@@ -30,7 +30,7 @@ namespace MastermindVariante
             if (GuessedRow.Caller != null)
                 Location = GuessedRow.Caller.Location.MoveBy(10, (int)GuessedRow.Caller.Height / 5);
 
-            //Size = Size.Rescale(Parameter.resizePercentage);
+            Size = Size.Rescale(Parameter.resizePercentage);
 
             //do not let user resize this form
             MaximizeBox = false;
@@ -58,6 +58,13 @@ namespace MastermindVariante
             this.excluded = excluded;
         }
 
+        /// <summary>
+        /// Set the caller of the keyboard instance.<br/>
+        /// If keyboard is invoked by a letter piece, accept one letter.<br/>
+        /// If keyboard is invoked by the full row, let type multiple letters for that row.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="caller"></param>
         public void SetCaller<T>(T caller)
         {
             if (caller is GuessedRow)

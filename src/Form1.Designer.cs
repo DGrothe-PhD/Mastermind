@@ -65,11 +65,11 @@ namespace MastermindVariante
             // txtUserName
             // 
             txtUserName.BackColor = Color.WhiteSmoke;
-            txtUserName.Location = new Point(405, 15);
+            txtUserName.Location = new Point(250, 58);
             txtUserName.Multiline = true;
             txtUserName.Name = "txtUserName";
             txtUserName.PlaceholderText = "Placeholder";
-            txtUserName.Size = new Size(211, 30);
+            txtUserName.Size = new Size(179, 30);
             txtUserName.TabIndex = 0;
             txtUserName.KeyPress += TxtUserName_KeyPress;
             // 
@@ -163,9 +163,9 @@ namespace MastermindVariante
             // CmbNames
             // 
             CmbNames.FormattingEnabled = true;
-            CmbNames.Location = new Point(404, 60);
+            CmbNames.Location = new Point(250, 106);
             CmbNames.Name = "CmbNames";
-            CmbNames.Size = new Size(213, 28);
+            CmbNames.Size = new Size(180, 28);
             CmbNames.TabIndex = 7;
             CmbNames.SelectedIndexChanged += CmbNames_SelectedIndexChanged;
             // 
@@ -195,8 +195,8 @@ namespace MastermindVariante
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private Label lblTitle;
+        private Label lblWordLength;
         private NumericUpDown numWordLength;
         public TextBox txtUserName;
         private ContextMenuStrip contextMenuStrip1;

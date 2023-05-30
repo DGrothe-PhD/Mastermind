@@ -41,37 +41,55 @@ namespace MastermindVariante
 
         private void SetElements()
         {
-            //Size = Size.Rescale(Parameter.resizePercentage);
+            Size = Size.Rescale(Parameter.resizePercentage);
             btnStart.Location = new Point(252, Parameter.DefaultTopMargin);
             btnStart.Size = new Size(78, Parameter.DefaultElementHeight);
 
+            //txtUserName.Size = txtUserName.Size.Rescale(Parameter.resizePercentage);
+            //CmbNames.Size = CmbNames.Size.Rescale(Parameter.resizePercentage);
+
+            lblTitle = new Label();
+            lblWordLength = new Label();
+
+            lblTitle.BackColor = Color.Transparent;
+            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
+            lblTitle.Location = new Point(12, Parameter.DefaultTopMargin);
+            lblTitle.Name = "label1";
+            lblTitle.AutoSize = false;
+            lblTitle.Size = new Size(140, Parameter.DefaultElementHeight);
+            lblTitle.TabIndex = 5;
+
+            var currentX = lblTitle.Location.X + lblTitle.Width + Parameter.paddingLeft;
+            var currentY = Parameter.DefaultTopMargin;
+            btnStart.Location = new Point(currentX, currentY);
+
+            // To the right of the `New` button.
+            currentX += btnStart.Width + 2 * Parameter.paddingLeft;
+
+            lblWordLength.AutoSize = false;
+            lblWordLength.BackColor = Color.Transparent;
+            lblWordLength.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblWordLength.Location = new Point(currentX, 15);
+            lblWordLength.Name = "label2";
+            lblWordLength.Size = new Size(95, 23);
+            lblWordLength.TabIndex = 2;
+
+            numWordLength.Location = new Point(currentX + lblWordLength.Width + Parameter.paddingLeft, currentY);
+
+            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
             txtUserName.Multiline = false;
             txtUserName.Text = "";
             txtUserName.Enabled = true;
-            txtUserName.Location = new Point(405, Parameter.DefaultTopMargin);
-            numWordLength.Location = new Point(343, Parameter.DefaultTopMargin);
+            txtUserName.Location = new Point(currentX, currentY);
 
-            label1 = new Label();
-            label2 = new Label();
+            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
+            CmbNames.Location = new Point(currentX, currentY);
 
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
-            label1.Location = new Point(12, Parameter.DefaultTopMargin);
-            label1.Name = "label1";
-            label1.AutoSize = false;
-            label1.Size = new Size(Width - 20, Parameter.DefaultElementHeight);
-            label1.TabIndex = 5;
+            //currentX += lblWordLength.Width + Parameter.paddingLeft;
+            
 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
-            label2.Location = new Point(242, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(95, 23);
-            label2.TabIndex = 2;
-
-            Controls.Add(label1);
-            Controls.Add(label2);
+            Controls.Add(lblTitle);
+            Controls.Add(lblWordLength);
 
             LanguageToolStripMenuItem.DropDownItems.AddRange(CurrentConfiguration.GetToolStrips<ToolStripMenuItem>());
 
@@ -85,8 +103,8 @@ namespace MastermindVariante
 
         private void SetElementNames()
         {
-            label1.Text = Resources.DescriptiveTitle;
-            label2.Text = Resources.WordLengthLabelText;
+            lblTitle.Text = Resources.DescriptiveTitle;
+            lblWordLength.Text = Resources.WordLengthLabelText;
             btnStart.Text = Resources.NewGameButtonText;
 
             txtUserName.PlaceholderText = Resources.PlayerNamePlaceholder;
@@ -118,7 +136,8 @@ namespace MastermindVariante
                 rows.Clear();
 
                 numWordLength.Enabled = false;
-                txtUserName.Enabled = false;
+
+                txtUserName.Hide();
                 CmbNames.Hide();
                 GameIsRunning = true;
 
@@ -153,7 +172,7 @@ namespace MastermindVariante
         {
             rows.LastOrDefault()?.HideButtons();
             numWordLength.Enabled = true;
-            txtUserName.Enabled = true;
+            txtUserName.Show();
 
             GetNames();
             CmbNames.Show();
