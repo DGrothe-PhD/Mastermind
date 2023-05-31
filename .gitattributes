@@ -1,0 +1,2 @@
+*.yml   text eol=lf
+*.cs    text eol=crlf
