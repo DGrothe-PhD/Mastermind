@@ -1,0 +1,15 @@
+deployment:
+- any: ['*.yml', '!labeler.yml']
+
+project:
+- any: ['*.sln', '*.proj']
+
+translation:
+- any: ['*.json', '/src/locales/Resources*.resx']
+  all: ['!*.cs']
+
+design:
+- all: ['/src/Resources/*.png', '!*.cs']
+
+testcase:
+- any: ['*_test.cs]
