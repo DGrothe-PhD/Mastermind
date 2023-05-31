@@ -12,6 +12,8 @@ namespace MastermindVariante
             SetWordList(languageCode);
         }
 
+        public JsonWordLists() { }
+
         /// <summary>
         /// Set the word lists according to the language code.
         /// </summary>
@@ -44,6 +46,9 @@ namespace MastermindVariante
         
     }
 
+    /// <summary>
+    /// Json Model class.
+    /// </summary>
     public class WordLists
     {
         public string[]? WordsWith3 { get; set; }

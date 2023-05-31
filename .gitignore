@@ -1,5 +1,5 @@
-src/bin/
-src/obj/
+bin/
+obj/
 *.user
 src/Properties/PublishProfiles/
 src/Properties/Settings.Designer.cs
