@@ -5,7 +5,9 @@
 	"JET", "HUT", "NEO", "BEN", "FAN", "SAM", "CAP", "CUP",
 	"HOW", "INN", "FIT", "RYE", "JOE", "JOY", "GAY", "CAN",
 	"TOM", "POP", "LAB", "MAX", "BUS", "WAS", "HIT", "HER", 
-	"RED", "MAY", "OFF", "ICE", "SUN", "BAR", "GUT", "DAY"
+	"RED", "MAY", "OFF", "ICE", "SUN", "BAR", "GUT", "DAY",
+	"DRY", "TRY", "EAT", "HOT", "MUD", "FOG", "SAY", "EAR",
+	"BOY", "BOX", "SIX", "TWO", "ONE", "ODD", "TEN", "HIP"
 ],
 "WordsWith4":
 [
@@ -19,7 +21,10 @@
 	"NERD", "DEEP", "FOUR", "FIVE", "WINE", "BEER", "MAIL", "MOON",
 	"YOGA", "CLIP", "RARE", "EGGS", "NUTS", "BONE", "TREE", "KNOW",
 	"RUTH", "WARM", "KIND", "RICE", "MEAL", "LOUD", "JAZZ", "BEAT",
-	"TIER", "EYES", "DEAL", "FIND", "THIN", "SOUL", "RAIN", "TEAM"
+	"TIER", "EYES", "DEAL", "FIND", "THIN", "SOUL", "RAIN", "TEAM",
+	"GONE", "COME", "WENT", "PEER", "READ", "TELL", "SALE", "LAMB",
+	"KISS", "MISS", "GIRL", "BOYS", "EVER", "EVEN", "NINE", "COOL",
+	"MILE"
 ],
 "WordsWith5":
 [
@@ -27,7 +32,10 @@
 	"MARCH", "APRIL", "SOLID", "PIZZA", "PASTA", "APRIL", "JESUS", "NIGEL", 
 	"THIGH", "POKAL", "KARTE", "THING", "SPARE", "FEAST", "VENUS", "ORBIT",
 	"HONEY", "SCARF", "CLOUD", "PRICE", "HAPPY", "FRESH", "CHESS", "CHEST",
-	"YOUNG", "PEACE", "PIECE", "NIGHT", "SHINE", "APPLE", "TEAMS",
-	"ORDER", "CHILI", "STONE", "INNER", "FIRST", "EXTRA", "THINK", "AWARD"
+	"YOUNG", "PEACE", "PIECE", "NIGHT", "SHINE", "APPLE", "TEAMS", "WRITE",
+	"ORDER", "CHILI", "STONE", "INNER", "FIRST", "EXTRA", "THINK", "AWARD",
+	"WRIST", "DRINK", "EATEN", "FLOOD", "CHEAP", "CRIME", "OFFER", "BRAKE",
+	"BREAK", "NEVER", "SEVEN", "EIGHT", "QUEER", "FUNNY", "BINGE", "WATCH",
+	"THREE"
 ]
 }
