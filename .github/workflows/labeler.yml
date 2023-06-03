@@ -7,9 +7,11 @@
 
 name: Labeler
 on:
-  pull_request:
-    types:
-      - opened
+  push:
+    branches:
+      - main
+  pull_request_target:
+    types: [opened, synchronized, reopened]
 
 jobs:
   label:
