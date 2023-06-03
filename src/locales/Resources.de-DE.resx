@@ -218,7 +218,7 @@ F4 öffnet Statistik</value>
     <value>&amp;Spielstatistik... F4</value>
   </data>
   <data name="ShowTipsToolStripMenuItemText" xml:space="preserve">
-    <value>&amp;Tipps</value>
+    <value>&amp;Tipps ... F3</value>
   </data>
   <data name="StatisticsWindowTitle" xml:space="preserve">
     <value>Statistics</value>
