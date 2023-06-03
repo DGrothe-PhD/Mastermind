@@ -352,7 +352,7 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Get &amp;Tips ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Get &amp;Tips ... F3 ähnelt.
         /// </summary>
         internal static string ShowTipsToolStripMenuItemText {
             get {

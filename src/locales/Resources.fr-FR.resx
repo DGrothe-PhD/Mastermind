@@ -218,7 +218,7 @@ F4 - montrer les statistiques</value>
     <value>&amp;Statistiques... F4</value>
   </data>
   <data name="ShowTipsToolStripMenuItemText" xml:space="preserve">
-    <value>&amp;Conseils</value>
+    <value>&amp;Conseils ... F3</value>
   </data>
   <data name="StatisticsWindowTitle" xml:space="preserve">
     <value>Statistiques</value>

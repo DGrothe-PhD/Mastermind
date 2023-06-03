@@ -296,6 +296,16 @@ namespace MastermindVariante
             {
                 ShowStatistics();
             }
+            else if(e.KeyCode == Keys.F3)
+            {
+                ToggleTips();
+            }
+        }
+
+        private void ToggleTips()
+        {
+            ShowTipsToolStripMenuItem.Checked = !(ShowTipsToolStripMenuItem.Checked);
+            WithTips = !WithTips;
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
