@@ -28,12 +28,14 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --logger "trx;LogFileName=test-results.trx" || true
+      working-directory: Mastermind.Tests
+      run: dotnet test Mastermind.Tests.csproj --no-restore --verbosity detailed --logger "trx;logfilename=testResults.trx" --results-directory TestResults
+      ##dotnet test --logger "trx;LogFileName=test-results.trx" || true
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: always()
       with:
         name: DotNET Tests
-        path: "**/test-results.trx"                            
+        path: "Mastermind.Tests/**/test-results.trx"                            
         reporter: dotnet-trx
         fail-on-error: true
