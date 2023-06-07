@@ -36,6 +36,6 @@ jobs:
       if: always()
       with:
         name: DotNET Tests
-        path: "Mastermind.Tests/**/test-results.trx"                            
+        path: "Mastermind.Tests/**/test*Results*.trx"                            
         reporter: dotnet-trx
         fail-on-error: true
