@@ -2,7 +2,8 @@
 [
 	"QUI", "DIX", "AIR", "BAS", "BON", "CAR", "SAC", "NEZ", "BUS", "CRU", "SEC", "SOL",
 	"TOI", "TON", "UNE", "VIA", "VIF", "VOS", "NUL", "PUR", "QUE", "SIX", "SUR", "TEL", 
-	"AMI", "PEU", "VIN", "MOT", "MAI", "NON", "MOI", "ICI", "ILS", "LUI", "DOS"
+	"AMI", "PEU", "VIN", "MOT", "MAI", "NON", "MOI", "ICI", "ILS", "LUI", "DOS", "FIN",
+	"FER", "SOU"
 ],
 "WordsWith4":
 [
