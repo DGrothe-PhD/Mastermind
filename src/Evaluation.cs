@@ -4,8 +4,8 @@ namespace MastermindVariante
 {
     public struct Points : IComparable<Points>
     {
-        public short blackpins;
-        public short whitepins;
+        public short blackpins { get; init; }
+        public short whitepins { get; init; }
 
         public Points(short blacks, short whites)
         {
@@ -65,8 +65,18 @@ namespace MastermindVariante
             }
             catch (Exception)
             {
-                MessageBox.Show("Error - Empty word lists");
+                MessageBox.Show("Error - Empty word or empty word lists.");
             }
+        }
+
+        /// <summary>
+        /// Let user choose a word you can guess.
+        /// </summary>
+        /// <param name="userChoice">given word to guess</param>
+        public void SetSolution(string userChoice)
+        {
+            wordLength = (short)userChoice.Length;
+            solution = userChoice;
         }
 
         /// <summary>
