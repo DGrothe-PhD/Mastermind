@@ -201,9 +201,10 @@ Lösung war:</value>
     <value>&amp;Gegner stellt Aufgabe</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2 öffnet Tastatur,
-# = Okay/Geratenes Wort auswerten
-F4 öffnet Statistik</value>
+    <value>F2 = Zeige Tastatur,
+#  = Okay/Geratenes Wort auswerten
+F4 = Zeige Statistik
+F3 = Mit Tipps oder ohne</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Bitte beenden Sie zunächst das laufende Spiel.</value>
