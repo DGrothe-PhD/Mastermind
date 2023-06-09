@@ -305,9 +305,10 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die F2: Open the keyboard,
-        ///# = Okay/Submit guessing
-        ///F4: Open Statistics ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die F2 = Open the keyboard,
+        ///#  = Okay/Submit guessing
+        ///F4 = Open Statistics
+        ///F3 = Toggle Tips ähnelt.
         /// </summary>
         internal static string QuickHelpText {
             get {
