@@ -40,18 +40,35 @@
             return (short)(value / length);
         }
 
-        // Randomly pick a string from an array.
+        /// <summary>
+        /// Randomly pick a string from an array.
+        /// </summary>
+        /// <param name="words">Array to pick from</param>
+        /// <returns></returns>
         internal static string Pick(this string[] words)
         {
             Random random = new();
             return words[random.Next(words.Length + 1)];
         }
 
+        /// <summary>
+        /// Shifts a point (on screen) by x and y.
+        /// </summary>
+        /// <param name="p">Point to move</param>
+        /// <param name="x">horizontal shift in pixels</param>
+        /// <param name="y">vertical shift in pixels</param>
+        /// <returns>The shifted point object</returns>
         internal static Point MoveBy(this Point p, int x, int y)
         {
             return new Point(p.X + x, p.Y + y);
         }
 
+        /// <summary>
+        /// Reduce a font by some percentage to adapt the design for non-HD screens.
+        /// </summary>
+        /// <param name="font">The font object to resize</param>
+        /// <param name="resizePercentage">percentage as int</param>
+        /// <returns></returns>
         internal static Font Resize(this Font font, int resizePercentage)
         {
             return new Font(font.FontFamily.Name, font.Size * resizePercentage / 100, font.Style);
