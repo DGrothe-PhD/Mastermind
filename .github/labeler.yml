@@ -2,16 +2,18 @@ deployment:
 - any: ['.github/workflows/*.yml', '!labeler.yml']
 
 project:
-- any: ['*.sln', '*.proj']
+- '*.sln'
+- '*.proj'
 
 translation:
-- any: ['src/locales/*.resx']
+- 'src/locales/*.resx'
 
 wordlists:
-- any: ['src/locales/*.json']
+- 'src/locales/*.json'
 
 design:
-- any: ['src/Resources/*.png']
+- 'src/Resources/*.png'
 
 testcase:
-- any: ['Mastermind.Tests/*.cs']
+- 'Mastermind.Tests/*.cs'
+- './**/*Test*.cs'
