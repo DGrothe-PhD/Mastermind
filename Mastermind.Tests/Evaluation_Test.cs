@@ -21,9 +21,10 @@ namespace Mastermind.Tests
         }
 
 
-        [TestCase("ZOBEL")]
-        public void WordPoints_Test(string guessedWord)
+        [Test]
+        public void WordPoints_Test()
         {
+            string guessedWord = "ZOBEL";
             List<Points> expected = new List<Points>
             {
                 new Points(5, 0),

@@ -29,8 +29,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       working-directory: Mastermind.Tests
-      run: dotnet test Mastermind.Tests.csproj --verbosity detailed --logger "trx;logfilename=testResults.trx" --results-directory TestResults
-      ##dotnet test --logger "trx;LogFileName=test-results.trx" || true
+      run: dotnet test Mastermind.Tests.csproj --logger "trx;logfilename=testResults.trx" --results-directory TestResults
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: always()
