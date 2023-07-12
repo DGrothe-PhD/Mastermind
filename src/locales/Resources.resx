@@ -201,9 +201,10 @@ Solution was:</value>
     <value>Play with &amp;peer</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2: Open the keyboard,
-# = Okay/Submit guessing
-F4: Open Statistics</value>
+    <value>F2 = Open the keyboard,
+#  = Okay/Submit guessing
+F4 = Open Statistics
+F3 = Toggle Tips</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Please stop the running game first.</value>
@@ -213,6 +214,9 @@ F4: Open Statistics</value>
   </data>
   <data name="ShowFriendsCheckBox" xml:space="preserve">
     <value>Show Friends</value>
+  </data>
+  <data name="ShowLastCheckBox" xml:space="preserve">
+    <value>Show last results only</value>
   </data>
   <data name="ShowStatisticsToolStripMenuItemText" xml:space="preserve">
     <value>Show &amp;Statistics...  F4</value>
@@ -231,5 +235,8 @@ F4: Open Statistics</value>
   </data>
   <data name="YouHaveWon" xml:space="preserve">
     <value>You have won!</value>
+  </data>
+  <data name="YourLastResults" xml:space="preserve">
+    <value>Your last results for</value>
   </data>
 </root>

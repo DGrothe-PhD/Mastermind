@@ -31,6 +31,7 @@
             txtScoredPoints = new TextBox();
             btnCopy = new Button();
             ChkShowFriends = new CheckBox();
+            ChkShowLastWeeks = new CheckBox();
             SuspendLayout();
             // 
             // txtScoredPoints
@@ -68,7 +69,22 @@
             ChkShowFriends.TabIndex = 2;
             ChkShowFriends.Text = "Freunde zeigen";
             ChkShowFriends.UseVisualStyleBackColor = false;
-            ChkShowFriends.CheckedChanged += CheckBox1_CheckedChanged;
+            ChkShowFriends.CheckedChanged += ChkShowFriends_CheckedChanged;
+            // 
+            // ChkShowLastWeeks
+            // 
+            ChkShowLastWeeks.AutoSize = true;
+            ChkShowLastWeeks.BackColor = Color.Transparent;
+            ChkShowLastWeeks.Checked = true;
+            ChkShowLastWeeks.CheckState = CheckState.Checked;
+            ChkShowLastWeeks.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ChkShowLastWeeks.Location = new Point(485, 154);
+            ChkShowLastWeeks.Name = "ChkShowLastWeeks";
+            ChkShowLastWeeks.Size = new Size(114, 29);
+            ChkShowLastWeeks.TabIndex = 3;
+            ChkShowLastWeeks.Text = "Nur Letzte";
+            ChkShowLastWeeks.UseVisualStyleBackColor = false;
+            ChkShowLastWeeks.CheckedChanged += ChkShowLastWeeks_CheckedChanged;
             // 
             // Statistics
             // 
@@ -77,6 +93,7 @@
             BackColor = Color.IndianRed;
             BackgroundImage = Properties.Resources.board;
             ClientSize = new Size(800, 450);
+            Controls.Add(ChkShowLastWeeks);
             Controls.Add(ChkShowFriends);
             Controls.Add(btnCopy);
             Controls.Add(txtScoredPoints);
@@ -92,5 +109,6 @@
         private TextBox txtScoredPoints;
         private Button btnCopy;
         private CheckBox ChkShowFriends;
+        private CheckBox ChkShowLastWeeks;
     }
 }

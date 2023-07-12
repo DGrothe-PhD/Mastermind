@@ -19,10 +19,15 @@ namespace MastermindVariante
 
             btnCopy.Text = Resources.CopyStatisticsButtonText;
             ChkShowFriends.Text = Resources.ShowFriendsCheckBox;
+            ChkShowLastWeeks.Text = Resources.ShowLastCheckBox;
+
             Text = Resources.StatisticsWindowTitle;
 
             pointsScored = new PointsScored();
             pointsScored.ReadData();
+
+            ChkShowFriends.Checked = true;
+            ChkShowLastWeeks.Checked = false;
             txtScoredPoints.Text = pointsScored.ToString();
             txtScoredPoints.SelectionLength = 0;
             txtScoredPoints.TabStop = false;
@@ -41,15 +46,27 @@ namespace MastermindVariante
             txtScoredPoints.SelectionLength = 0;
         }
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        private void ChkShowFriends_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowGameResults();
+        }
+
+        private void ShowGameResults()
         {
             if (ChkShowFriends.Checked)
             {
-                txtScoredPoints.Text = pointsScored.ToString();
+                if (ChkShowLastWeeks.Checked)
+                {
+                    txtScoredPoints.Text = pointsScored.LastResults();
+                }
+                else
+                {
+                    txtScoredPoints.Text = pointsScored.ToString();
+                }
             }
             else if (name != "Debug")
             {
-                txtScoredPoints.Text = pointsScored.MyResult(name);
+                txtScoredPoints.Text = pointsScored.MyResult(name, ChkShowLastWeeks.Checked);
             }
         }
 
@@ -58,6 +75,11 @@ namespace MastermindVariante
             var names = pointsScored.Players.Select(x => x.NickName).ToArray();
             Array.Sort(names);
             return names;
+        }
+
+        private void ChkShowLastWeeks_CheckedChanged(object sender, EventArgs e)
+        {
+            ShowGameResults();
         }
     }
 }

@@ -27,6 +27,14 @@ namespace MastermindVariante
             }
         }
 
+        public string LastResults()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(NickName + ":");
+            Results.ForEach(Results => sb.AppendLine(Results.LastResults()));
+            return sb.ToString();
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new();

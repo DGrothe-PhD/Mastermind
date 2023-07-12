@@ -13,6 +13,9 @@ namespace MastermindVariante
             Players = new List<Player>();
         }
 
+        /// <summary>
+        /// Read players' results from csv file.
+        /// </summary>
         public void ReadData()
         {
             try
@@ -43,19 +46,28 @@ namespace MastermindVariante
             }
         }
 
-        public override string ToString()
+        public string LastResults()
         {
             StringBuilder sb = new();
-            foreach (Player player in Players)
-            {
-                sb.AppendLine(player.ToString());
-            }
+            Players.ForEach(x => sb.AppendLine(x.LastResults()));
 
             return sb.ToString();
         }
 
-        public string MyResult(string name)
+        public override string ToString()
         {
+            StringBuilder sb = new();
+            Players.ForEach(x => sb.AppendLine(x.ToString()));
+
+            return sb.ToString();
+        }
+
+        public string MyResult(string name, bool lastOnly = false)
+        {
+            if (lastOnly)
+            {
+                return Players?.FirstOrDefault(x => x.NickName == name)?.LastResults() ?? "";
+            }
             return Players?.FirstOrDefault(x => x.NickName == name)?.ToString() ?? "";
         }
     }

@@ -55,38 +55,22 @@ namespace MastermindVariante
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point).Resize(Parameter.resizePercentage);
             lblTitle.Location = new Point(12, Parameter.DefaultTopMargin);
             lblTitle.Name = "label1";
-            lblTitle.AutoSize = false;
+            lblTitle.AutoSize = true;
             lblTitle.Size = new Size(140, Parameter.DefaultElementHeight);
             lblTitle.TabIndex = 5;
-
-            var currentX = lblTitle.Location.X + lblTitle.Width + Parameter.paddingLeft;
-            var currentY = Parameter.DefaultTopMargin;
-            btnStart.Location = new Point(currentX, currentY);
-
-            // To the right of the `New` button.
-            currentX += btnStart.Width + 2 * Parameter.paddingLeft;
 
             lblWordLength.AutoSize = false;
             lblWordLength.BackColor = Color.Transparent;
             lblWordLength.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblWordLength.Location = new Point(currentX, 15);
             lblWordLength.Name = "label2";
             lblWordLength.Size = new Size(95, 23);
             lblWordLength.TabIndex = 2;
 
-            numWordLength.Location = new Point(currentX + lblWordLength.Width + Parameter.paddingLeft, currentY);
-
-            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
             txtUserName.Multiline = false;
             txtUserName.Text = "";
             txtUserName.Enabled = true;
-            txtUserName.Location = new Point(currentX, currentY);
 
-            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
-            CmbNames.Location = new Point(currentX, currentY);
-
-            //currentX += lblWordLength.Width + Parameter.paddingLeft;
-            
+            PositionElements();
 
             Controls.Add(lblTitle);
             Controls.Add(lblWordLength);
@@ -99,6 +83,21 @@ namespace MastermindVariante
             }
 
             SetElementNames();
+        }
+
+        private void PositionElements()
+        {
+            var currentX = lblTitle.Location.X + lblTitle.Width + Parameter.paddingLeft;
+            var currentY = Parameter.DefaultTopMargin;
+            btnStart.Location = new Point(currentX, currentY);
+            currentX += btnStart.Width + 2 * Parameter.paddingLeft;
+            lblWordLength.Location = new Point(currentX, 15);
+            numWordLength.Location = new Point(currentX + lblWordLength.Width + Parameter.paddingLeft, currentY);
+            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
+            txtUserName.Location = new Point(currentX, currentY);
+
+            currentY += Parameter.DefaultElementHeight + Parameter.paddingBottom;
+            CmbNames.Location = new Point(currentX, currentY);
         }
 
         private void SetElementNames()
@@ -118,6 +117,8 @@ namespace MastermindVariante
             PlayWithPeerToolStripMenuItem.Text = Resources.PlayWithPeerToolStripMenuItemText;
             ShowStatisticsToolStripMenuItem.Text = Resources.ShowStatisticsToolStripMenuItemText;
             ShowTipsToolStripMenuItem.Text = Resources.ShowTipsToolStripMenuItemText;
+
+            PositionElements();
         }
 
         private void RunNewGame()

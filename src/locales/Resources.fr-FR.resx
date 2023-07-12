@@ -201,9 +201,10 @@ La solution était:</value>
     <value>Jouer &amp;avec un(e) ami(e)</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2 - ouvrir le clavier,
-# = évaluer le mot deviné
-F4 - montrer les statistiques</value>
+    <value>F2 = ouvrir le clavier,
+#  = évaluer le mot deviné
+F4 = montrer les statistiques
+F3 = Avec ou sans de conseils</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Veuillez d'abord quitter le jeu en cours.</value>
@@ -213,6 +214,9 @@ F4 - montrer les statistiques</value>
   </data>
   <data name="ShowFriendsCheckBox" xml:space="preserve">
     <value>Résultats des amis</value>
+  </data>
+  <data name="ShowLastCheckBox" xml:space="preserve">
+    <value>Seulement les derniers résultats</value>
   </data>
   <data name="ShowStatisticsToolStripMenuItemText" xml:space="preserve">
     <value>&amp;Statistiques... F4</value>
@@ -231,5 +235,8 @@ F4 - montrer les statistiques</value>
   </data>
   <data name="YouHaveWon" xml:space="preserve">
     <value>Vous avez gagné!</value>
+  </data>
+  <data name="YourLastResults" xml:space="preserve">
+    <value>Vos derniers résultats pour</value>
   </data>
 </root>

@@ -305,9 +305,10 @@ namespace Lang {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die F2: Open the keyboard,
-        ///# = Okay/Submit guessing
-        ///F4: Open Statistics ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die F2 = Open the keyboard,
+        ///#  = Okay/Submit guessing
+        ///F4 = Open Statistics
+        ///F3 = Toggle Tips ähnelt.
         /// </summary>
         internal static string QuickHelpText {
             get {
@@ -339,6 +340,15 @@ namespace Lang {
         internal static string ShowFriendsCheckBox {
             get {
                 return ResourceManager.GetString("ShowFriendsCheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Show last results only ähnelt.
+        /// </summary>
+        internal static string ShowLastCheckBox {
+            get {
+                return ResourceManager.GetString("ShowLastCheckBox", resourceCulture);
             }
         }
         
@@ -393,6 +403,15 @@ namespace Lang {
         internal static string YouHaveWon {
             get {
                 return ResourceManager.GetString("YouHaveWon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Your last results for ähnelt.
+        /// </summary>
+        internal static string YourLastResults {
+            get {
+                return ResourceManager.GetString("YourLastResults", resourceCulture);
             }
         }
     }

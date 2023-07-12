@@ -1,4 +1,5 @@
 ﻿using Lang;
+using System.Threading.Tasks.Dataflow;
 
 namespace MastermindVariante
 {
@@ -17,11 +18,26 @@ namespace MastermindVariante
             this.numGames = numGames;
         }
 
+        /// <summary>
+        /// Add a number of rows of a game for that level.
+        /// </summary>
+        /// <param name="rows">Number of rows to guess a word in a game</param>
+        /// <returns></returns>
         public LevelSum Add(int rows)
         {
             this.numGames++;
             this.rows.Add(rows);
             return this;
+        }
+
+        public List<int> Filter(int lastHowMany = 3)
+        {
+            return rows.TakeLast(lastHowMany).ToList();
+        }
+
+        public string LastResults()
+        {
+            return $"{Resources.YourLastResults} {level}: "+ String.Join(", ", Filter());
         }
 
         public override string ToString()

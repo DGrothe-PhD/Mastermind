@@ -201,9 +201,10 @@ Lösung war:</value>
     <value>&amp;Gegner stellt Aufgabe</value>
   </data>
   <data name="QuickHelpText" xml:space="preserve">
-    <value>F2 öffnet Tastatur,
-# = Okay/Geratenes Wort auswerten
-F4 öffnet Statistik</value>
+    <value>F2 = Zeige Tastatur,
+#  = Okay/Geratenes Wort auswerten
+F4 = Zeige Statistik
+F3 = Mit Tipps oder ohne</value>
   </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Bitte beenden Sie zunächst das laufende Spiel.</value>
@@ -213,6 +214,9 @@ F4 öffnet Statistik</value>
   </data>
   <data name="ShowFriendsCheckBox" xml:space="preserve">
     <value>Freunde zeigen</value>
+  </data>
+  <data name="ShowLastCheckBox" xml:space="preserve">
+    <value>Nur die letzten Ergebnisse</value>
   </data>
   <data name="ShowStatisticsToolStripMenuItemText" xml:space="preserve">
     <value>&amp;Spielstatistik... F4</value>
@@ -231,5 +235,8 @@ F4 öffnet Statistik</value>
   </data>
   <data name="YouHaveWon" xml:space="preserve">
     <value>Sie haben gewonnen!</value>
+  </data>
+  <data name="YourLastResults" xml:space="preserve">
+    <value>Ihre letzten Ergebnisse für</value>
   </data>
 </root>
