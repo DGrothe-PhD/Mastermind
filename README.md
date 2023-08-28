@@ -7,6 +7,9 @@
 * Works on both x86 and x64 architecture
 * .NET 6 runtime required, can be easily installed from the link in the message box
 
+## Installation
+Mastermind is portable, no installation is required. To start the game, unpack the zip and double-click the .exe file.
+
 ## Game instructions
 
 The inspiration for this came from a board game sold in the last century that we enjoyed playing in the family.\
@@ -41,6 +44,9 @@ etc.
 
 <hr>
 <a name="de-DE">
+  
+## Installation 
+Portable Anwendung, benötigt keine Installation, einfach das zip entpacken und Doppelklick auf die .exe-Datei.
 
 ## Spielanleitung
 
