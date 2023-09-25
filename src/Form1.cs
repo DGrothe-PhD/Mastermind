@@ -262,15 +262,24 @@ namespace MastermindVariante
 
         private void EndThisRoundToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!GameIsRunning)
-                MessageBox.Show(Resources.NoRunningGameText, Resources.NoRunningGameTitle);
-            else if (ConfirmEnd() == DialogResult.Yes)
+            ConfirmEndDialog();
+        }
+
+        private void ConfirmEndDialog(bool closing=false)
+        {
+            if(GameIsRunning && ConfirmEnd() == DialogResult.Yes)
+            {
                 FinishGame();
+                return;
+            }
+            if (!closing)
+            {
+                MessageBox.Show(Resources.NoRunningGameText, Resources.NoRunningGameTitle);
+            }
         }
 
         private static DialogResult ConfirmEnd()
         {
-            //[tsl] GivingUpQuestion, GivingUpTitle
             return MessageBox.Show(Resources.GivingUpQuestion,
                 Resources.GivingUpTitle,
                 MessageBoxButtons.YesNo);
@@ -278,8 +287,7 @@ namespace MastermindVariante
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (GameIsRunning)
-                e.Cancel = (ConfirmEnd() != DialogResult.Yes);
+            ConfirmEndDialog(true);
         }
 
         #region KeyEvents
@@ -297,7 +305,7 @@ namespace MastermindVariante
             {
                 ShowStatistics();
             }
-            else if(e.KeyCode == Keys.F3)
+            else if (e.KeyCode == Keys.F3)
             {
                 ToggleTips();
             }
@@ -357,5 +365,6 @@ namespace MastermindVariante
         {
             SetElementNames();
         }
+
     }
 }
