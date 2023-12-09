@@ -206,6 +206,12 @@ La solution était:</value>
 F4 = montrer les statistiques
 F3 = Avec ou sans de conseils</value>
   </data>
+  <data name="QuicklyGuessed" xml:space="preserve">
+    <value>Excellent!</value>
+  </data>
+  <data name="QuiteGood" xml:space="preserve">
+    <value>C'est assez bon!</value>
+  </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Veuillez d'abord quitter le jeu en cours.</value>
   </data>
@@ -229,6 +235,9 @@ F3 = Avec ou sans de conseils</value>
   </data>
   <data name="TellNumberOfRows" xml:space="preserve">
     <value>Vous avez eu besoin de {0} lignes.</value>
+  </data>
+  <data name="TookLong" xml:space="preserve">
+    <value>tbd</value>
   </data>
   <data name="WordLengthLabelText" xml:space="preserve">
     <value>Longueur des mots</value>

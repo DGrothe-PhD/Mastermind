@@ -20,6 +20,7 @@ namespace MastermindVariante
 
             InitializeComponent();
             FormatDialog();
+            ShowResult();
             StoreResult();
             StartPosition = FormStartPosition.Manual;
             if (GuessedRow.Caller != null)
@@ -39,24 +40,32 @@ namespace MastermindVariante
             pnlEmoji.BackgroundImageLayout = ImageLayout.Stretch;
             pnlEmoji.Size = pnlEmoji.Size.Rescale(Parameter.resizePercentage);
 
-            lblResult.Text = name + Environment.NewLine + Resources.YouHaveWon;
             lblResult.Location = new Point(
                 pnlEmoji.Width + 24 * Parameter.resizePercentage / 100,
                 lblResult.Location.Y
             );
             lblExtraInfo.Location = new Point(
                 pnlEmoji.Width + 24 * Parameter.resizePercentage / 100,
-                lblResult.Height + lblResult.Location.Y + 24 * Parameter.resizePercentage / 100
+                lblResult.Height + lblResult.Location.Y + 40 * Parameter.resizePercentage / 100
             );
 
-            Size = new Size(Width, pnlEmoji.Size.Height + 28 * Parameter.resizePercentage/100);
+            Size = new Size(Width, pnlEmoji.Size.Height + 28 * Parameter.resizePercentage / 100);
+        }
 
+        private void ShowResult()
+        {
+            lblResult.Text = name + Environment.NewLine + Resources.YouHaveWon;
             lblExtraInfo.Text = String.Format(Resources.TellNumberOfRows, numberOfRows);
 
+            lblExtraInfo.Text += numberOfRows switch
+            {
+                < 6 => Environment.NewLine + Resources.QuicklyGuessed,
+                < 11 => Environment.NewLine + Resources.QuiteGood,
+                _ => ""
+            };
             lblExtraInfo.Font = lblExtraInfo.Font.Resize(Parameter.resizePercentage);
             lblResult.Font = lblResult.Font.Resize(Parameter.resizePercentage);
         }
-
         private void StoreResult()
         {
             //Debug games are not stored.

@@ -317,6 +317,24 @@ namespace Lang {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Excellent! ähnelt.
+        /// </summary>
+        internal static string QuicklyGuessed {
+            get {
+                return ResourceManager.GetString("QuicklyGuessed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Good! ähnelt.
+        /// </summary>
+        internal static string QuiteGood {
+            get {
+                return ResourceManager.GetString("QuiteGood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Please stop the running game first. ähnelt.
         /// </summary>
         internal static string RunningGameMessageText {
@@ -385,6 +403,15 @@ namespace Lang {
         internal static string TellNumberOfRows {
             get {
                 return ResourceManager.GetString("TellNumberOfRows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die tbd ähnelt.
+        /// </summary>
+        internal static string TookLong {
+            get {
+                return ResourceManager.GetString("TookLong", resourceCulture);
             }
         }
         

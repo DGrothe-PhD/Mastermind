@@ -206,6 +206,12 @@ Solution was:</value>
 F4 = Open Statistics
 F3 = Toggle Tips</value>
   </data>
+  <data name="QuicklyGuessed" xml:space="preserve">
+    <value>Excellent!</value>
+  </data>
+  <data name="QuiteGood" xml:space="preserve">
+    <value>Good!</value>
+  </data>
   <data name="RunningGameMessageText" xml:space="preserve">
     <value>Please stop the running game first.</value>
   </data>
@@ -229,6 +235,9 @@ F3 = Toggle Tips</value>
   </data>
   <data name="TellNumberOfRows" xml:space="preserve">
     <value>It took you {0} rows to guess the word.</value>
+  </data>
+  <data name="TookLong" xml:space="preserve">
+    <value>tbd</value>
   </data>
   <data name="WordLengthLabelText" xml:space="preserve">
     <value>Word length</value>
