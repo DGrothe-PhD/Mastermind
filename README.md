@@ -7,6 +7,7 @@
 * Works on both x86 and x64 architecture
 * .NET 6 runtime required, can be easily installed from the link in the message box
 
+Examples &rArr; [see images here](examples/images.md)
 ## Installation
 Mastermind is portable, no installation is required. To start the game, unpack the zip and double-click the .exe file.
 
