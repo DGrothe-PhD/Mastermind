@@ -1,0 +1,28 @@
+body{
+	font-family:Calibri;
+}
+	
+
+th,td{
+	text-align:right;
+	padding:0.5em;
+}
+
+th:nth-child(4),td:nth-child(4){
+	text-align:left;
+	padding-right:3em;
+}
+thead{
+	background-color: darkseagreen;
+}
+
+table, th, td{
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+tr:nth-child(even){
+	background-color: lavender;
+}
+tr:hover{
+	background-color: darkseagreen;
+}
