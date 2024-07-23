@@ -1,3 +1,5 @@
+![example event parameter](https://github.com/DGrothe-PhD/Mastermind/actions/workflows/dotnet.yml/badge.svg?event=push)
+
 <a href="#de-DE">zur deutschen Version</a>
 ## System requirements
 * Windows 11
