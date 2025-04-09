@@ -3,6 +3,7 @@
     public partial class GuessedRow : Parameter, ILetters, IMMDispose
     {
         private static short rowIndex = -1;
+
         internal static Form1? Caller { get; private set; }
         private readonly List<Piece> pieces;
         private readonly List<ResultPin> pins;
@@ -32,8 +33,8 @@
 
             for (short i = 0; i < level; i++)
             {
-                pieces.Add(new Piece(Caller, rowIndex, i));
-                pins.Add(new ResultPin(Caller, rowIndex, i));
+                pieces.Add(new Piece(Caller!, rowIndex, i));
+                pins.Add(new ResultPin(Caller!, rowIndex, i));
             }
 
             FormatObjects();
@@ -114,7 +115,7 @@
             {
                 foreach (var x in pieces)
                 {
-                    if (!(ExcludedChars!.Contains(x.GetLetter()[0])))
+                    if (!ExcludedChars!.Contains(x.GetLetter()[0]))
                     {
                         ExcludedChars.Add(x.GetLetter()[0]);
                     }

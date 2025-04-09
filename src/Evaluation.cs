@@ -1,8 +1,9 @@
 ﻿using Lang;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MastermindVariante
 {
-    public struct Points : IComparable<Points>
+    public readonly struct Points : IComparable<Points>, IEquatable<Points>
     {
         public short blackpins { get; init; }
         public short whitepins { get; init; }
@@ -13,12 +14,35 @@ namespace MastermindVariante
             this.whitepins = whites;
         }
 
-        public int CompareTo(Points other)
+        public readonly int CompareTo(Points other)
         {
             if (this.blackpins < other.blackpins) return -1;
             if (this.blackpins == other.blackpins)
                 return this.whitepins.CompareTo(other.whitepins);
             else return 1;
+        }
+
+        public readonly bool Equals(Points other)
+        {
+            return other is Points p && p.blackpins == blackpins && p.whitepins == whitepins;
+        }
+
+        public readonly override bool Equals(object? obj)
+            => obj is Points objS && Equals(objS);
+
+        public static bool operator== (Points a, Points b)
+        {
+            return a.Equals(b);
+        }
+
+        public static bool operator!= (Points a, Points b)
+        {
+            return !(a == b);
+        }
+
+        public override readonly int GetHashCode()
+        {
+            return HashCode.Combine(blackpins, whitepins);
         }
     }
     public class Evaluation
