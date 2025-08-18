@@ -1,19 +1,35 @@
 deployment:
-- any: ['.github/workflows/*.yml', '!labeler.yml']
+  - changed-files:
+      - any-glob-to-any-file: 
+          - '.github/workflows/*.yml'
+          - '!.github/workflows/labeler.yml'
+          - '**/*.exe'
 
 project:
-- '*.sln'
-- '*.proj'
+  - changed-files:
+      - any-glob-to-any-file: 
+          - '**/*.sln'
+          - '**/*.proj'
 
 translation:
-- 'src/locales/*.resx'
+  - changed-files:
+      - any-glob-to-any-file: 
+          - 'src/locales/*.resx'
 
 wordlists:
-- 'src/locales/*.json'
+  - changed-files:
+      - any-glob-to-any-file: 
+          - 'src/locales/*.json'
 
 design:
-- 'src/Resources/*.png'
+  - changed-files:
+      - any-glob-to-any-file: 
+          - 'src/Resources/*.png'
+          - 'src/Resources/*.svg'
+          - 'src/Resources/*.jpg'
 
 testcase:
-- 'Mastermind.Tests/*.cs'
-- './**/*Test*.cs'
+  - changed-files:
+      - any-glob-to-any-file: 
+          - 'Mastermind.Tests/*.cs'
+          - '**/*Test*.cs'
