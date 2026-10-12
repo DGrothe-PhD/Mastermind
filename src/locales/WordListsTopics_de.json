@@ -1,0 +1,18 @@
+{"Fussball" :
+{"WordsWith3":
+[
+	"ELF", "PER", "FAN", "TOR", "UWE", "ULI", "CAN", "TAH", "ROT", "AUS"
+],
+"WordsWith4":
+[
+	"OTTO", "BALL", "ZEHN", "NEUN", "LAUF", "FUSS", "KOPF", "BEIN", 
+	"HAND", "TEAM", "RAUM", "LAHM", "PEPE", "ECKE", "NETZ", "RAHN",
+	"GELB", "PASS", "KAHN", "CHIP"
+],
+"WordsWith5":
+[
+	"RASEN", "GRUEN", "PLATZ", "LINIE", "POKAL", "LATTE", "BERTI",
+	"VOGTS", "POLDI", "KETTE", "KARTE", "ELFER", "TITAN", "KURVE",
+	"SECHS", "PAUSE", 
+]
+}}
